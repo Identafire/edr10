@@ -1,3 +1,4 @@
+
 //------------------------------------------------------------------------
 //COLORS
 //------------------------------------------------------------------------
@@ -43,11 +44,15 @@ $edr-green-light: #D3E863;
 .text-mauve {
     color: $edr-mauve;
 }
-
+.bg-white-transparent {
+    background-color: rgba(255,255,255,0.41);
+}
 //------------------------------------------------------------------------
 //MARGINS + SPACERS
 //------------------------------------------------------------------------
 
+
+// margin top
 .mt-6 {
     margin-top: 6rem;
 }
@@ -70,6 +75,75 @@ $edr-green-light: #D3E863;
     margin-top: 12rem;
 }
 
+//margin right/end
+.me-6 {
+    margin-right: 6rem;
+}
+.me-7 {
+    margin-right: 7rem;
+}
+.me-8 {
+    margin-right: 8rem;
+}
+.me-9 {
+    margin-right: 9rem;
+}
+.me-10 {
+    margin-right: 10rem;
+}
+.me-11 {
+    margin-right: 11rem;
+}
+.me-12 {
+    margin-right: 12rem;
+}
+
+//margin-bottom
+.mb-6 {
+    margin-bottom: 6rem;
+}
+.mb-7 {
+    margin-bottom: 7rem;
+}
+.mb-8 {
+    margin-bottom: 8rem;
+}
+.mb-9 {
+    margin-bottom: 9rem;
+}
+.mb-10 {
+    margin-bottom: 10rem;
+}
+.mb-11 {
+    margin-bottom: 11rem;
+}
+.mb-12 {
+    margin-bottom: 12rem;
+}
+
+//margin-left/start
+.ms-6 {
+    margin-left: 6rem;
+}
+.ms-7 {
+    margin-left: 7rem;
+}
+.ms-8 {
+    margin-left: 8rem;
+}
+.ms-9 {
+    margin-left: 9rem;
+}
+.ms-10 {
+    margin-left: 10rem;
+}
+.ms-11 {
+    margin-left: 11rem;
+}
+
+///////negative margins
+
+//negative margin top
 .mt-n6 {
     margin-top: -6rem;
 }
@@ -91,6 +165,196 @@ $edr-green-light: #D3E863;
 .mt-n12 {
     margin-top: -12rem;
 }
+.mt-n13 {
+    margin-top: -13rem;
+}
+.mt-n14 {
+    margin-top: -14rem;
+}
+.mt-n15 {
+    margin-top: -15rem;
+}
+.mt-n16 {
+    margin-top: -16rem;
+}
+.mt-n17 {
+    margin-top: -17rem;
+}
+.mt-n18 {
+    margin-top: -18rem;
+}
+.mt-n19 {
+    margin-top: -19rem;
+}
+.mt-n20 {
+    margin-top: -20rem;
+}
+
+//negative margin left/end
+.me-n6 {
+    margin-bottom: -6rem;
+}
+.me-n7 {
+    margin-bottom: -7rem;
+}
+.me-n8 {
+    margin-bottom: -8rem;
+}
+.me-n9 {
+    margin-bottom: -9rem;
+}
+.me-n10 {
+    margin-bottom: -10rem;
+}
+.me-n11 {
+    margin-bottom: -11rem;
+}
+.me-n12 {
+    margin-bottom: -12rem;
+}
+
+// negative margin-bottom
+.mb-n6 {
+    margin-bottom: -6rem;
+}
+.mb-n7 {
+    margin-bottom: -7rem;
+}
+.mb-n8 {
+    margin-bottom: -8rem;
+}
+.mb-n9 {
+    margin-bottom: -9rem;
+}
+.mb-n10 {
+    margin-bottom: -10rem;
+}
+.mb-n11 {
+    margin-bottom: -11rem;
+}
+.mb-n12 {
+    margin-bottom: -12rem;
+}
+
+//negative margin-left/start
+
+.ms-n6 {
+    margin-left: -6rem;
+}
+.ms-n7 {
+    margin-left: -7rem;
+}
+.ms-n8 {
+    margin-left: -8rem;
+}
+.ms-n9 {
+    margin-left: -9rem;
+}
+.ms-n10 {
+    margin-left: -10rem;
+}
+.ms-n11 {
+    margin-left: -11rem;
+}
+.ms-n12 {
+    margin-left: -12rem;
+}
+
+
+///////padding
+
+// padding top
+.pt-6 {
+    padding-top: 6rem;
+}
+.pt-7 {
+    padding-top: 7rem;
+}
+.pt-8 {
+    padding-top: 8rem;
+}
+.pt-9 {
+    padding-top: 9rem;
+}
+.pt-10 {
+    padding-top: 10rem;
+}
+.pt-11 {
+    padding-top: 11rem;
+}
+.pt-12 {
+    padding-top: 12rem;
+}
+
+//padding right/end
+.pe-6 {
+    padding-bottom: 6rem;
+}
+.pe-7 {
+    padding-bottom: 7rem;
+}
+.pe-8 {
+    padding-bottom: 8rem;
+}
+.pe-9 {
+    padding-bottom: 9rem;
+}
+.pe-10 {
+    padding-bottom: 10rem;
+}
+.pe-11 {
+    padding-bottom: 11rem;
+}
+.pe-12 {
+    padding-bottom: 12rem;
+}
+
+//padding bottom
+.pb-6 {
+    padding-bottom: 6rem;
+}
+.pb-7 {
+    padding-bottom: 7rem;
+}
+.pb-8 {
+    padding-bottom: 8rem;
+}
+.pb-9 {
+    padding-bottom: 9rem;
+}
+.pb-10 {
+    padding-bottom: 10rem;
+}
+.pb-11 {
+    padding-bottom: 11rem;
+}
+.pb-12 {
+    padding-bottom: 12rem;
+}
+
+//pading left/start
+.ps-6 {
+    padding-top: 6rem;
+}
+.ps-7 {
+    padding-top: 7rem;
+}
+.ps-8 {
+    padding-top: 8rem;
+}
+.ps-9 {
+    padding-top: 9rem;
+}
+.ps-10 {
+    padding-top: 10rem;
+}
+.ps-11 {
+    padding-top: 11rem;
+}
+.ps-12 {
+    padding-top: 12rem;
+}
+
 
 //------------------------------------------------------------------------
 //UTLITIIES
@@ -162,6 +426,17 @@ h6,
     letter-spacing: 1px;
 }
 
+$font-family-sans-serif: "Proxima Nova", "gotham", "open sans", helvetica, arial, sans-serif;
+.sans { 
+    font-family: $font-family-sans-serif;
+}
+$font-family-serif: "Rockwell", garamond, serif;
+.serif {
+    font-family: $font-family-serif;
+}
+.fs-7 {
+    font-size: .9rem;
+}
 //------------------------------------------------------------------------
 //MODES
 //------------------------------------------------------------------------
@@ -175,8 +450,8 @@ h6,
 
 //motion mode
 [data-bs-motion="reduced-motion"] {
-    h1 {
-        background-color: cadetblue;
+    .rotating {
+        animation: none;
     }
 }
 
@@ -188,37 +463,18 @@ h6,
 .border-mauve {
     border: 2px solid $edr-mauve;
 }
-.bg-orange {
+.outline-mauve {
+    outline: 2px solid $edr-mauve;
+}
+.border-orange {
     border: 2px solid $edr-orange;
 }
-.bg-green {
+.outline-orange {
+    outline: 2px solid $edr-orange;
+}
+.border-green {
     border: 2px solid $edr-green;
 }
-//------------------------------------------------------------------------
-//TYPOGRAPHY
-//------------------------------------------------------------------------
-.chart-label{
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-//------------------------------------------------------------------------
-//ACCORDION
-//------------------------------------------------------------------------
-$accordion-bg: transparent;
-$accordion-color: $primary;
-$accordion-icon-hover-color: rgba(255,0,0,0.5);
-$accordion-icon-color: rgba(0,0,0,0.5);
-$accordion-icon-active-color: rgba(0,0,0,0.5);
-$accordion-icon-hover-bg: rgba(255,0,0,0.5);
-
-$accordion-button-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="acc-btn" width="31" height="31" viewBox="0 0 31 31"><path id="Subtraction_1" data-name="Subtraction 1" d="M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z" transform="translate(-1119 -384)" fill="#{$accordion-icon-color}"/></svg>');
-
-$accordion-button-active-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="acc-btn-open" width="31" height="31" viewBox="0 0 31 31"><path id="Subtraction_1" data-name="Subtraction 1" d="M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z" transform="translate(-1119 -384) rotate(45deg)" fill="#{$accordion-icon-active-color}"/></svg>');
-
-.accordion-header{
-    &:hover{
-    svg{
-        fill: $accordion-icon-hover-bg !important;
-    }
-}
+.outline-green {
+    outline: 2px solid $edr-green;
 }

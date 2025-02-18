@@ -27,35 +27,42 @@ NAVIGATION
 ----------------------------->
 
    <!-- navigation -->
-<div class="flex-shrink-0 px-4 py-5 position-fixed end-0 rounded-start-6 border border-2 border-end-0 border-primary bg-white" style="width: 195px; z-index: 100">
-  <h2 class="text-uppercase">Navigation</h2>
+<div class="flex-shrink-0 px-4 py-5 position-fixed end-0 rounded-start-6 border border-2 border-end-0 border-primary bg-white text-primary" style="width: 195px; z-index: 100">
+  <h2 class="nav-label sans fs-7"><strong>Navigation</strong></h2>
   <ul class="list-unstyled ps-0">
     <li class="mb-1">
-      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-        Open
+      <button class="btn btn-toggle d-inline-flex align-items-center border-0 p-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+          <g fill="#0a3e59">
+            <path data-name="Rectangle 84" d="M0 0h25v5H0z"/>
+            <path data-name="Rectangle 85" d="M0 10h25v5H0z"/>
+            <path data-name="Rectangle 86" d="M0 20h25v5H0z"/>
+          </g>
+        </svg><span class="ms-2 nav-label">Open</span>
       </button>
       <div class="collapse" id="home-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="#impact" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Impact</a></li>
-          <li><a href="#journey" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Journey</a></li>
-          <li><a href="#future" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Future</a></li>
+          <li><a href="#impact" class="link-body-emphasis d-inline-flex text-decoration-none rounded nav-label fs-7 mt-3 py-2">Impact</a></li>
+          <li><a href="#journey" class="link-body-emphasis d-inline-flex text-decoration-none rounded nav-label fs-7 py-2">Journey</a></li>
+          <li><a href="#future" class="link-body-emphasis d-inline-flex text-decoration-none rounded nav-label fs-7 py-2">Future</a></li>
         </ul>
       </div>
     </li>
-    <li class="border-top my-3"></li>
-    <li><a href="#top">Back to Top</a></li>
-    <li class="border-top my-3"></li>
+    <li class="border-top my-3 border-primary"></li>
+    <li><a class="nav-label" href="#top"><strong>Back to Top</strong></a></li>
+    <li class="border-top my-3 border-primary"></li>
     <li class="mb-1">
       <!-- page motion control starts -->
       <div class="form-check form-switch">
-        <label class="form-check-label" for="motionSwitch">Reduce Page Motion</label>
+        <label class="form-check-label nav-label fs-7 mb-2" for="motionSwitch">Reduce Page Motion</label>
         <input class="form-check-input" type="checkbox" id="mySwitchMotion" name="motion" value="off">
       </div>
     </li>
+    <li class="border-top my-3"></li>
     <li class="mb-1">
       <!-- contrast mode starts -->
       <div class="form-check form-switch">
-        <label class="form-check-label" for="contrastSwitch">High Contrast</label>
+        <label class="form-check-label nav-label fs-7" for="contrastSwitch">High Contrast</label>
         <input class="form-check-input" type="checkbox" id="mySwitchContrast" name="contrast" value="off">
       </div>
     </li>
@@ -107,7 +114,7 @@ IMPACT SECTION
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
     <!-- heading -->
-    <div class="container heading-container col-sm-8 justify-content-start align-items-end mt-n12 position-relative">
+    <div class="container heading-container col-8 justify-content-start align-items-end mt-n12 position-relative">
       <div class="shape-container position-relative z-2 d-inline">
         <svg xmlns="http://www.w3.org/2000/svg" class="rotating medium-speed" width="273.345" height="273.345" viewBox="0 0 273.345 273.345">
           <rect width="201.073" height="201.073" transform="matrix(0.875, 0.485, -0.485, 0.875, 97.482, 0)"/>
@@ -163,7 +170,7 @@ IMPACT SECTION
   <!-- /intro -->
 
   <!------------------ stats ----------------->
-  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid">
+  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
     <div class="row d-flex justify-items-center justify-content-center w-100">
       <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
         <figure class="stat mt-2 z-6">
@@ -269,7 +276,7 @@ IMPACT SECTION
   <!-- /intro -->
 
   <!-- stats -->
-  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid">
+  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
     <div class="row d-flex justify-items-center justify-content-center w-100">
       <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
         <figure class="stat mt-2 z-6 p-3">
@@ -355,23 +362,25 @@ IMPACT SECTION
   <!-- /intro -->
 
   <!------------------ pillbox: 43 ----------------->
-  <div class="pillbox row col-sm-8 rounded-200 mx-auto border-mauve mt-5 bg-white">
-    <div class="container-fluid text-bg-white w-100 rounded-200 text-center bg-mauve mt-n1">
-      <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
-        <div class="d-inline-flex align-items-center">
+  <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-mauve mt-5 bg-white">
+    <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-mauve mt-n1">
+      <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-1 rounded-200">
+        <div class="d-inline-flex align-items-center mt-n8">
           <div class="button-shape-container">
-            <h3 class="text-mauve z-5">43</h3>
-            <svg class="rotating medium-speed z-4" xmlns="http://www.w3.org/2000/svg" width="244.07" height="244.07" viewBox="0 0 244.07 244.07">
-              <rect width="187.488" height="187.488" transform="translate(0 70.234) rotate(-22)" fill="#fff"/>
+            <svg class="rotating medium-speed z-4" xmlns="http://www.w3.org/2000/svg" width="200" height="230" viewBox="0 0 244.07 244.07">
+              <rect class="shadow" width="187.488" height="187.488" transform="translate(0 70.234) rotate(-22)" fill="#fff"/>
             </svg>          
+            <h3 class="text-mauve z-5 mt-n9 position-relative display-5">43</h3>
           </div>
         </div>
+        <div class="mt-n4 d-inline-flex">
         <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
-            <p>states have drawn on EdReports&rsquo; work to promote awareness and selection of high-quality materials since 2015. This includes 37 States that list EdReports as a resource and 16 with which we've collaborated directly.</p>
+            <p>43 States have drawn on EdReports&rsquo; work to promote awareness and selection of high-quality materials since 2015. This includes 37 States that list EdReports as a resource and 16 with which we've collaborated directly.</p>
         </div>
-        <div class="d-inline-flex align-items-center">
+        <div class="d-inline-flex align-items-center mt-n3">
             <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
         </div>
+      </div>
       <!--  /wrapper -->
       </div>
     <!-- /container -->
@@ -402,12 +411,14 @@ IMPACT SECTION
   </div>
 
 
-  <div class="pillbox row col-sm-8 rounded-200 mx-auto border-mauve mt-5 bg-white">
-    <div class="container-fluid text-bg-white w-100 rounded-200 text-center bg-mauve mt-n1">
+  <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-mauve mt-5 bg-white">
+    <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-mauve mt-n1">
       <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
-        <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
+        <div class="text-light d-flex flex-fill align-items-center align-content-center w-100 lead py-4 justify-content-between">
+          <div class="col">
           <h3>Supporting State Innovation</h3>
             <p class="lead">EdReports has collaborated on multiple initiatives with the High-Quality Instructional Materials and Professional Development (IMPD) Network and its member states since its 2017 inception.</p>
+          </div>
         </div>
         <div class="d-inline-flex align-items-center">
             <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
@@ -572,7 +583,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -657,7 +668,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -741,7 +752,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -821,14 +832,14 @@ JOURNEY SECTION
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
      <!-- heading -->
-    <div class="container heading-container col-sm-8 justify-content-start align-items-end mt-n12 position-relative">
+    <div class="container heading-container col-8 justify-content-start align-items-end mt-n18 position-relative">
       <div class="shape-container position-relative z-2 d-inline">
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotating medium-speed" width="273.345" height="273.345" viewBox="0 0 273.345 273.345">
-          <rect width="201.073" height="201.073" transform="matrix(0.875, 0.485, -0.485, 0.875, 97.482, 0)"/>
-        </svg>      
+        <svg xmlns="http://www.w3.org/2000/svg" width="290.792" height="324.418" class="rotating medium-speed">
+          <path data-name="Polygon 41" d="M31.378 135.936 290.72 52.765 227.963 324.43Z" fill="#f05323"/>
+        </svg>   
       </div>
-      <div class="text-container mt-n12 position-relative z-3">
-        <h2 class="display-5 fw-bold text-light ms-5">Our <span class="text-uppercase h1"><br><i>Journey</i></span></h2>
+      <div class="text-container mt-n10 position-relative z-3">
+        <h2 class="display-5 fw-bold text-light ms-8">Our <span class="text-uppercase h1"><br><i>Journey</i></span></h2>
       </div>
       <!--heading end -->
   </div>
@@ -848,7 +859,7 @@ JOURNEY SECTION
       <li>Tools</li>
     </ul>
   </div>
-  <div class="col-10 mx-auto">
+  <div class="col-8 mx-auto">
   <div class="accordion" id="accordionExample">
     <h3>2014</h3>
     <div class="accordion-item milestone">
@@ -889,7 +900,35 @@ JOURNEY SECTION
     </div>
   </div>
 </div>
+<!------- accordion end -->
+<div class="col-8 mx-auto mt-5">
+<h4>2025</h4>
+<p>As we move further into 2025, we&rsquo;re already seeing the impact of some of our most ambitious updates to date. The first reviews using our version 2.0 tools got underway in early 2025 and the first reports are expected later this year. These tools—our most comprehensive updates since 2020—reflect the latest research, educator feedback, and field-wide advancements, offering more precise and actionable insights for districts and educators.</p>
+<p>Among the key enhancements: stronger alignment with the science of reading and structured literacy in ELA, refined math criteria with deepened emphasis on the Standards for Mathematical Practice, further integration of phenomena-driven, three-dimensional learning in science, and the introduction of dedicated review tools for evaluating multilingual learner supports in each content area.</p>
+<p>2025 also marks the beginning of our long-anticipated pre-kindergarten (pre-K) reviews. With inaugural reports expected in early 2026, this work will help early childhood educators make more informed choices about learning materials.</p>
+  <p>Alongside these efforts, we&rsquo;re rolling out a major upgrade to our Reports Center, ensuring that the first reviews using our v2.0 tools are presented in an even more intuitive and user-friendly way. These enhancements will improve accessibility, streamline navigation, and provide clearer insights—helping decision-makers make confident, informed comparisons and selections.
+  </p>
 </div>
+</div>
+<!-- journey button -->
+<div class="container d-flex justify-content-sm-center z-2 mt-n5">
+  <div class="d-inline-flex justify-content-sm-center flex-row">
+    <a href="#future" class="btn btn-outline-primary bg-white btn-lg px-4 py-4 btn-border-radius-large gap-3 btn-rounded-5 d-flex">
+      <div class="text-container lh-1">
+        <span class="text-uppercase h6">Learn About</span><br> <span class="h3">Our</span> <span class="h1"><i>Future</i></span>
+      </div>
+    <div class="button-shape-container">
+      <svg xmlns="http://www.w3.org/2000/svg" class="btn-shape rotating medium-speed z-index-1" width="90.158" height="90.158" viewBox="0 0 90.158 90.158">
+        <rect id="ui-square-white" width="66" height="66" transform="translate(33) rotate(30)"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="btn-caret" width="25.415" height="14.122" viewBox="0 0 25.415 14.122">
+        <path id="Path_710" data-name="Path 710" d="M-880.215-16.8l12,12-12,12" transform="translate(7.907 880.922) rotate(90)" fill="none" stroke-width="2"/>
+      </svg>
+    </div>
+    </a>
+  </div>
+</div>
+<!-- journey button end -->
 
 
 
@@ -908,14 +947,14 @@ JOURNEY SECTION
 <!-- future header -->
 <section>
   <div id="future" class="section-header">
-    <div class="container col-lg-9 bg-green-light rounded-6 text-center text-light mt-5 p-0 z-1">
+    <div class="container col-8 bg-green-light rounded-6 text-center text-light mt-5 p-0 z-1">
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
      <!-- heading -->
-    <div class="container heading-container col-sm-8 justify-content-start align-items-end mt-n12 position-relative">
+    <div class="container heading-container col-7 justify-content-start align-items-end mt-n12 position-relative">
       <div class="shape-container position-relative z-2 d-inline">
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotating medium-speed" width="273.345" height="273.345" viewBox="0 0 273.345 273.345">
-          <rect width="201.073" height="201.073" transform="matrix(0.875, 0.485, -0.485, 0.875, 97.482, 0)"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="282.104" height="282.106" class="rotating medium-speed" viewBox="0 0 282.104 282.106">
+          <path data-name="Polygon 46" d="m13.415 127.638 110.921-117.39L276.98 75.584l-16.582 157.769-162.892 32.171Z" fill="#9fbd3b"/>
         </svg>      
       </div>
       <div class="text-container mt-n12 position-relative z-3">
@@ -925,6 +964,91 @@ JOURNEY SECTION
   </div>
   </div>
       <!-- future header end -->
+
+      <div class="col-6 text-primary mx-auto mt-7 text-center lead">
+        <p>Looking ahead to the next decade, our top priority remains the same as it has since 2015: delivering high-quality reviews that shape the creation, selection, and use of excellent instructional materials. Our future focus centers on four key priorities: expanding and refining our reviews, enhancing report accessibility, amplifying thought leadership, and leveraging data-driven insights. Together, these efforts enable EdReports to keep inspiring publishers to raise the bar on materials and empowering school systems to adopt the high-quality curricula every student needs to succeed.</p>
+      </div>
+
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+        <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
+          <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
+            <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
+              <h3>Expanding and Deepening Reviews</h4>
+            </div>
+            <div class="d-inline-flex align-items-center">
+                <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
+            </div>
+          <!--  /wrapper -->
+          </div>
+        <!-- /container -->
+        </div>
+        <div class="container my-4 text-center p-5">
+          <p class="lead">We&rsquo;ll continue to support educator demand for improvements across the materials market through regular enhancements to our review tools, processes, and multi-year roadmap, including expanding into new content areas and material types.</p>
+         </div>
+    
+      <!-- pillbox end -->
+      </div>
+
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+        <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
+          <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
+            <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
+              <h3>Engaging & Usable Reports</h4>
+            </div>
+            <div class="d-inline-flex align-items-center">
+                <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
+            </div>
+          <!--  /wrapper -->
+          </div>
+        <!-- /container -->
+        </div>
+        <div class="container my-4 text-center p-5">
+          <p class="lead">We commit to continuously improve and refine our website user experience, ensuring reports are accessible, actionable, and easy for decision-makers to navigate.
+          </p>
+         </div>
+    
+      <!-- pillbox end -->
+      </div>
+
+
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+        <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
+          <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
+            <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
+              <h3>Insight-Driven Market Influence</h4>
+            </div>
+            <div class="d-inline-flex align-items-center">
+                <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
+            </div>
+          <!--  /wrapper -->
+          </div>
+        <!-- /container -->
+        </div>
+        <div class="container my-4 text-center p-5">
+          <p class="lead">We aim to serve as a leading source of proactive insights on the instructional materials marketplace, ensuring that key decision-makers rely on our data-driven forecasts and market analyses to influence the adoption of HQIM.</div>
+    
+      <!-- pillbox end -->
+      </div>
+
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green my-5 bg-white">
+        <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
+          <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
+            <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
+              <h3>Thought Leadership</h4>
+            </div>
+            <div class="d-inline-flex align-items-center">
+                <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
+            </div>
+          <!--  /wrapper -->
+          </div>
+        <!-- /container -->
+        </div>
+        <div class="container my-4 text-center p-5">
+          <p class="lead">We’re dedicated to affirming EdReports' position as a leading HQIM expert through strategic thought leadership campaigns that leverage partnerships, events, and data-driven insights, amplifying influence and driving demand.</div>
+    
+      <!-- pillbox end -->
+      </div>
+       
 </section>
   </body>
 </html>
