@@ -34,6 +34,10 @@
   color: #501141;
 }
 
+.bg-white-transparent {
+  background-color: #ffffff69;
+}
+
 .mt-6 {
   margin-top: 6rem;
 }
@@ -62,6 +66,86 @@
   margin-top: 12rem;
 }
 
+.me-6 {
+  margin-right: 6rem;
+}
+
+.me-7 {
+  margin-right: 7rem;
+}
+
+.me-8 {
+  margin-right: 8rem;
+}
+
+.me-9 {
+  margin-right: 9rem;
+}
+
+.me-10 {
+  margin-right: 10rem;
+}
+
+.me-11 {
+  margin-right: 11rem;
+}
+
+.me-12 {
+  margin-right: 12rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mb-7 {
+  margin-bottom: 7rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
+}
+
+.mb-9 {
+  margin-bottom: 9rem;
+}
+
+.mb-10 {
+  margin-bottom: 10rem;
+}
+
+.mb-11 {
+  margin-bottom: 11rem;
+}
+
+.mb-12 {
+  margin-bottom: 12rem;
+}
+
+.ms-6 {
+  margin-left: 6rem;
+}
+
+.ms-7 {
+  margin-left: 7rem;
+}
+
+.ms-8 {
+  margin-left: 8rem;
+}
+
+.ms-9 {
+  margin-left: 9rem;
+}
+
+.ms-10 {
+  margin-left: 10rem;
+}
+
+.ms-11 {
+  margin-left: 11rem;
+}
+
 .mt-n6 {
   margin-top: -6rem;
 }
@@ -88,6 +172,234 @@
 
 .mt-n12 {
   margin-top: -12rem;
+}
+
+.mt-n13 {
+  margin-top: -13rem;
+}
+
+.mt-n14 {
+  margin-top: -14rem;
+}
+
+.mt-n15 {
+  margin-top: -15rem;
+}
+
+.mt-n16 {
+  margin-top: -16rem;
+}
+
+.mt-n17 {
+  margin-top: -17rem;
+}
+
+.mt-n18 {
+  margin-top: -18rem;
+}
+
+.mt-n19 {
+  margin-top: -19rem;
+}
+
+.mt-n20 {
+  margin-top: -20rem;
+}
+
+.me-n6 {
+  margin-bottom: -6rem;
+}
+
+.me-n7 {
+  margin-bottom: -7rem;
+}
+
+.me-n8 {
+  margin-bottom: -8rem;
+}
+
+.me-n9 {
+  margin-bottom: -9rem;
+}
+
+.me-n10 {
+  margin-bottom: -10rem;
+}
+
+.me-n11 {
+  margin-bottom: -11rem;
+}
+
+.me-n12 {
+  margin-bottom: -12rem;
+}
+
+.mb-n6 {
+  margin-bottom: -6rem;
+}
+
+.mb-n7 {
+  margin-bottom: -7rem;
+}
+
+.mb-n8 {
+  margin-bottom: -8rem;
+}
+
+.mb-n9 {
+  margin-bottom: -9rem;
+}
+
+.mb-n10 {
+  margin-bottom: -10rem;
+}
+
+.mb-n11 {
+  margin-bottom: -11rem;
+}
+
+.mb-n12 {
+  margin-bottom: -12rem;
+}
+
+.ms-n6 {
+  margin-left: -6rem;
+}
+
+.ms-n7 {
+  margin-left: -7rem;
+}
+
+.ms-n8 {
+  margin-left: -8rem;
+}
+
+.ms-n9 {
+  margin-left: -9rem;
+}
+
+.ms-n10 {
+  margin-left: -10rem;
+}
+
+.ms-n11 {
+  margin-left: -11rem;
+}
+
+.ms-n12 {
+  margin-left: -12rem;
+}
+
+.pt-6 {
+  padding-top: 6rem;
+}
+
+.pt-7 {
+  padding-top: 7rem;
+}
+
+.pt-8 {
+  padding-top: 8rem;
+}
+
+.pt-9 {
+  padding-top: 9rem;
+}
+
+.pt-10 {
+  padding-top: 10rem;
+}
+
+.pt-11 {
+  padding-top: 11rem;
+}
+
+.pt-12 {
+  padding-top: 12rem;
+}
+
+.pe-6 {
+  padding-bottom: 6rem;
+}
+
+.pe-7 {
+  padding-bottom: 7rem;
+}
+
+.pe-8 {
+  padding-bottom: 8rem;
+}
+
+.pe-9 {
+  padding-bottom: 9rem;
+}
+
+.pe-10 {
+  padding-bottom: 10rem;
+}
+
+.pe-11 {
+  padding-bottom: 11rem;
+}
+
+.pe-12 {
+  padding-bottom: 12rem;
+}
+
+.pb-6 {
+  padding-bottom: 6rem;
+}
+
+.pb-7 {
+  padding-bottom: 7rem;
+}
+
+.pb-8 {
+  padding-bottom: 8rem;
+}
+
+.pb-9 {
+  padding-bottom: 9rem;
+}
+
+.pb-10 {
+  padding-bottom: 10rem;
+}
+
+.pb-11 {
+  padding-bottom: 11rem;
+}
+
+.pb-12 {
+  padding-bottom: 12rem;
+}
+
+.ps-6 {
+  padding-top: 6rem;
+}
+
+.ps-7 {
+  padding-top: 7rem;
+}
+
+.ps-8 {
+  padding-top: 8rem;
+}
+
+.ps-9 {
+  padding-top: 9rem;
+}
+
+.ps-10 {
+  padding-top: 10rem;
+}
+
+.ps-11 {
+  padding-top: 11rem;
+}
+
+.ps-12 {
+  padding-top: 12rem;
 }
 
 .rounded-6 {
@@ -144,33 +456,48 @@ h6, .h6 {
   letter-spacing: 1px;
 }
 
+.sans {
+  font-family: Proxima Nova, gotham, open sans, helvetica, arial, sans-serif;
+}
+
+.serif {
+  font-family: Rockwell, garamond, serif;
+}
+
+.fs-7 {
+  font-size: .9rem;
+}
+
 [data-bs-theme="contrast"] body {
   background-color: #fff;
 }
 
-[data-bs-motion="reduced-motion"] h1, [data-bs-motion="reduced-motion"] .h1 {
-  background-color: #5f9ea0;
+[data-bs-motion="reduced-motion"] .rotating {
+  animation: none;
 }
 
 .border-mauve {
   border: 2px solid #501141;
 }
 
-.bg-orange {
+.outline-mauve {
+  outline: 2px solid #501141;
+}
+
+.border-orange {
   border: 2px solid #f05323;
 }
 
-.bg-green {
+.outline-orange {
+  outline: 2px solid #f05323;
+}
+
+.border-green {
   border: 2px solid #9fbd3b;
 }
 
-.chart-label {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.accordion-header:hover svg {
-  fill: #ff000080 !important;
+.outline-green {
+  outline: 2px solid #9fbd3b;
 }
 
 :root, [data-bs-theme="light"] {
@@ -239,7 +566,7 @@ h6, .h6 {
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Proxima Nova", "gotham", "open sans", helvetica, arial, sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, #ffffff26, #fff0);
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -3532,8 +3859,8 @@ progress {
 }
 
 .accordion {
-  --bs-accordion-color: #0a3e59;
-  --bs-accordion-bg: transparent;
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-bg: var(--bs-body-bg);
   --bs-accordion-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: var(--bs-border-width);
@@ -3543,11 +3870,11 @@ progress {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns=\"http://www.w3.org/2000/svg\" class=\"acc-btn\" width=\"31\" height=\"31\" viewBox=\"0 0 31 31\"%3e%3cpath id=\"Subtraction_1\" data-name=\"Subtraction 1\" d=\"M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z\" transform=\"translate%28-1119 -384%29\" fill=\"rgba%280, 0, 0, 0.5%29\"/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform .2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns=\"http://www.w3.org/2000/svg\" class=\"acc-btn-open\" width=\"31\" height=\"31\" viewBox=\"0 0 31 31\"%3e%3cpath id=\"Subtraction_1\" data-name=\"Subtraction 1\" d=\"M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z\" transform=\"translate%28-1119 -384%29 rotate%2845deg%29\" fill=\"rgba%280, 0, 0, 0.5%29\"/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgb%284, 24.8, 35.6%29' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem #0a3e5940;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -11127,5 +11454,24 @@ figure.stat {
 
 .legend #does-not-use-edreports {
   fill: #899fa8;
+}
+
+.chart-label, .nav-label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.accordion-header:hover svg {
+  fill: #ff000080 !important;
+}
+
+.pillbox {
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+  min-height: 400px;
+}
+
+.pill {
+  max-height: 200px;
 }
 /*# sourceMappingURL=index.044e704e.css.map */
