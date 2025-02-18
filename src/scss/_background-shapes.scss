@@ -1,0 +1,27 @@
+.background-shape {
+    z-index: -1;
+    width: 110vw;
+    height: 110vw;
+    position: fixed;
+    // margin-left: -10vw;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);      
+    }
+}
+
+.rotating {
+    animation: rotating 300s linear infinite;
+    &.medium-speed{
+        animation-duration: 150s;
+    }
+    &.fast-speed{
+        animation-duration: 75s;
+    }
+}
+
