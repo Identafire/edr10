@@ -419,34 +419,6 @@
   border-radius: 200px;
 }
 
-.button-shape-container {
-  margin-top: -10px;
-}
-
-.button-shape-container .btn-caret {
-  z-index: 5;
-  margin-left: -50%;
-  position: relative;
-}
-
-.button-shape-container .btn-caret path {
-  stroke: #0a3e59;
-}
-
-.button-shape-container .btn-shape {
-  fill: #fff;
-  z-index: 1;
-  position: relative;
-}
-
-.button-shape-container:hover .btn-shape, .button-shape-container:focus .btn-shape {
-  fill: #0a3e59;
-}
-
-.button-shape-container:hover .btn-caret path, .button-shape-container:focus .btn-caret path {
-  stroke: #fff;
-}
-
 h2, .h2, h3, .h3 {
   font-family: rockwell, serif;
   font-weight: 200;
@@ -11389,6 +11361,50 @@ progress {
   animation-duration: 75s;
 }
 
+.nav {
+  max-width: 100px;
+}
+
+.nav li {
+  width: 100%;
+}
+
+.nav li.impact path {
+  fill: #0a3e59;
+}
+
+.nav li.impact rect {
+  fill: #0000;
+}
+
+.nav li.impact:hover path, .nav li.impact:active path, .nav li.impact:focus path, .nav li.impact:hover rect, .nav li.impact:active rect, .nav li.impact:focus rect {
+  fill: #501141;
+}
+
+.nav li.journey path.outer {
+  fill: #0000;
+}
+
+.nav li.journey path.inner {
+  fill: #0a3e59;
+}
+
+.nav li.journey:hover path.outer, .nav li.journey:active path.outer, .nav li.journey:focus path.outer, .nav li.journey:hover path.inner, .nav li.journey:active path.inner, .nav li.journey:focus path.inner {
+  fill: #f05323;
+}
+
+.nav li.future path.outer {
+  fill: #0000;
+}
+
+.nav li.future path.inner {
+  fill: #0a3e59;
+}
+
+.nav li.future:hover path.outer, .nav li.future:active path.outer, .nav li.future:focus path.outer, .nav li.future:hover path.inner, .nav li.future:active path.inner, .nav li.future:focus path.inner {
+  fill: #9fbd3b;
+}
+
 .section-header .gradient-mask {
   background-position: top;
   background-repeat: no-repeat;
@@ -11429,6 +11445,7 @@ progress {
 }
 
 .stats-grid * {
+  font-weight: bold;
   overflow: visible;
 }
 
@@ -11473,5 +11490,119 @@ figure.stat {
 
 .pill {
   max-height: 200px;
+}
+
+.button-shape-container {
+  margin-top: -10px;
+}
+
+.button-shape-container .btn-caret {
+  z-index: 5;
+  margin-left: -50%;
+  position: relative;
+}
+
+.button-shape-container .btn-shape {
+  fill: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.button-shape-container:hover .btn-shape, .button-shape-container:focus .btn-shape {
+  fill: #0a3e59;
+}
+
+.btn-light {
+  color: #0a3e59;
+  background-color: #fff;
+}
+
+.btn-light svg, .btn-light rect {
+  fill: #0a3e59;
+  stroke: #fff;
+}
+
+.btn-light path {
+  stroke: #fff;
+}
+
+.btn-light:hover {
+  color: #fff;
+  background-color: #0a3e59;
+}
+
+.btn-light:hover svg, .btn-light:hover rect {
+  fill: #fff;
+  stroke: #0a3e59;
+}
+
+.btn-light:hover path {
+  stroke: #0a3e59;
+}
+
+.btn-light.mauve svg, .btn-light.mauve rect {
+  fill: #501141;
+  stroke: #fff;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: #0a3e59;
+}
+
+.btn-dark svg, .btn-dark rect {
+  fill: #fff;
+}
+
+.btn-dark path {
+  stroke: #0a3e59;
+}
+
+.btn-dark:hover {
+  color: #0a3e59;
+  background-color: #fff;
+}
+
+.btn-dark:hover svg, .btn-dark:hover rect {
+  fill: #0a3e59;
+}
+
+.btn-dark.mauve:hover {
+  color: #fff;
+  background-color: #501141;
+}
+
+.btn-dark.mauve:hover svg, .btn-dark.mauve:hover rect {
+  fill: #fff;
+}
+
+.btn-dark.mauve:hover path {
+  stroke: #501141;
+}
+
+.btn-light.orange:hover {
+  color: #fff;
+  background-color: #f05323;
+}
+
+.btn-light.orange:hover svg, .btn-light.orange:hover rect {
+  fill: #fff;
+}
+
+.btn-light.orange:hover path {
+  stroke: #f05323;
+}
+
+.btn-light.green:hover {
+  color: #fff;
+  background-color: #9fbd3b;
+}
+
+.btn-light.green:hover svg, .btn-light.green:hover rect {
+  fill: #fff;
+}
+
+.btn-light.green:hover path {
+  stroke: #9fbd3b;
 }
 /*# sourceMappingURL=index.044e704e.css.map */

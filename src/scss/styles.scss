@@ -1,6 +1,10 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../../node_modules/bootstrap/scss/_functions";
 
+//------------------------------------------------------------------------
+//Color Variables & Overrides
+//------------------------------------------------------------------------
+
 // overrie variables
 @import "custom-variables";
 
@@ -47,13 +51,67 @@
 @import "background-shapes";
 
 //------------------------------------------------------------------------
-//Color Variables & Overrides
-//------------------------------------------------------------------------
-
-
-//------------------------------------------------------------------------
 //nav
 //------------------------------------------------------------------------
+
+.nav{
+max-width: 100px;
+li{
+    width: 100%;
+    &.impact,
+    {
+        path{
+            fill: $primary;
+        }
+        rect{
+            fill: transparent;
+        }
+        &:hover, &:active, &:focus{
+            path{
+                fill: $edr-mauve;
+            }
+            rect{
+                fill: $edr-mauve;
+            }
+        }
+    }
+    &.journey{
+        path.outer{
+            fill: transparent;
+        }
+        path.inner{
+            fill: $primary;
+        }
+        &:hover, &:active, &:focus{
+            path.outer{
+                fill: $edr-orange;
+            }
+            path.inner{
+                fill: $edr-orange;
+            }
+        }
+    }
+    &.future{
+        path.outer{
+            fill: transparent;
+        }
+        path.inner{
+            fill: $primary;
+        }
+        &:hover, &:active, &:focus{
+            path.outer{
+                fill: $edr-green;
+            }
+            path.inner{
+                fill: $edr-green;
+            }
+        }
+    }
+}
+}
+
+        
+
 
 //------------------------------------------------------------------------
 //hero
@@ -126,6 +184,7 @@
     
     *{
         overflow: visible;
+        font-weight: bold;
     }
     .col-sm{
     background: none;
@@ -194,3 +253,117 @@ $accordion-button-active-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3
 .pill{
     max-height: 200px;
 }
+
+//------------------------------------------------------------------------
+//BUTTONS
+//------------------------------------------------------------------------
+
+.button-shape-container{
+    margin-top: -10px;
+    .btn-caret{
+        position: relative;
+        margin-left: -50%;
+        z-index: 5;
+    }
+    .btn-shape{
+        fill: white;
+        position: relative;
+        z-index: 1;
+    }
+    &:hover, &:focus{
+        .btn-shape{
+            fill: #0A3E59;
+        }
+    }
+}
+    .btn-light{
+        background-color: white;
+        color: $primary;
+        svg,
+        rect{
+            fill: $primary;
+            stroke: white;
+        }
+        path{
+            stroke: white;
+        }
+        &:hover{
+        background-color: $primary;
+        color: white;
+            svg,
+            rect{
+            fill: white;
+            stroke: $primary;
+            }
+            path{
+                stroke: $primary;
+            }
+        
+        }
+        &.mauve{
+            svg,
+        rect{
+            fill: $edr-mauve;
+            stroke: white;
+        }
+        }
+    }
+    .btn-dark{
+        background-color: $primary;
+        color: white;
+        svg,
+        rect{
+            fill: white;
+        }
+        path{
+            stroke: $primary;
+        }
+        &:hover{
+            color: $primary;
+            background-color: white;
+            svg,
+            rect{
+            fill: $primary;
+            }
+        }
+    }
+    .btn-dark.mauve{
+        &:hover{
+            background-color: $edr-mauve;
+            color: white;
+            svg,
+            rect{
+                fill: white;
+            }
+            path{
+                stroke: $edr-mauve;
+            }
+        }
+    }
+    .btn-light.orange{
+        &:hover{
+            background-color: $edr-orange;
+            color: white;
+            svg,
+            rect{
+                fill: white;
+            }
+            path{
+                stroke: $edr-orange;
+            }
+        }
+    }
+    .btn-light.green{
+        &:hover{
+            background-color: $edr-green;
+            color: white;
+            svg,
+            rect{
+                fill: white;
+            }
+            path{
+                stroke: $edr-green;
+            }
+        }
+    }
+
