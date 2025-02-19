@@ -354,7 +354,11 @@ $edr-green-light: #D3E863;
 .ps-12 {
     padding-top: 12rem;
 }
+//------------------------------------------------------------------------
+//BUTTONS
+//------------------------------------------------------------------------
 
+$btn-border-radius-lg: 2rem;
 
 //------------------------------------------------------------------------
 //UTLITIIES
@@ -374,38 +378,6 @@ $edr-green-light: #D3E863;
 }
 
 $enable-negative-margins: true;
-
-//------------------------------------------------------------------------
-//BUTTONS
-//------------------------------------------------------------------------
-
-$btn-border-radius-lg: 2rem;
-.button-shape-container{
-    margin-top: -10px;
-    .btn-caret{
-        position: relative;
-        margin-left: -50%;
-        z-index: 5;
-        path {
-            stroke: #0A3E59;
-        }
-    }
-    .btn-shape{
-        fill: white;
-        position: relative;
-        z-index: 1;
-    }
-    &:hover, &:focus{
-        .btn-shape{
-            fill: #0A3E59;
-        }
-        .btn-caret{
-            path{
-                stroke: white;
-            }
-        }
-    }
-}
 
 //------------------------------------------------------------------------
 //TYPOGRAPHY
