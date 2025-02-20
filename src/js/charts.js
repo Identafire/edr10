@@ -1,49 +1,31 @@
-// const xValues = [" ","A","B","C"," "];
-// const yValues = [null,41,50,52,null];
-// var dotColors = [null,"red","green","blue",null];
-// var legend = [null,"2016","By end of first year of EdReports' full K-12 Coverage","By end of 2024",null];
-
-// new Chart("myChart", {
-//   type: "line",
-//   data: {
-//     labels: xValues,
-//     datasets: [{
-//       fill: false,
-//       lineTension: 0,
-//       backgroundColor:"rgba(10, 62, 89, 1)",
-//       borderColor:"rgba(10, 62, 89, 1)",
-//       data: yValues,
-//       pointRadius: 10
-//     }]
-//   },
-//   options: {
-//     legend: {
-//       display: true,
-//       gnerateLabels: true,
-//       labels: { 
-//         text: legend,
-//       },
-//     },
-//     generateLabels: true,
-//     scales: {
-//       yAxes: [{ticks: {min: 35, max:60}}],
-//     }
-//   }
-// });
-
 // ELA
-const elaxArray = ["2016: Innaugural Reports, Grades 3-8 Only", "2017: By end of first year of EdReports' full K-12 Coverage", "By end of 2024"];
-const elayArray = [41, 50, 52];
+var trace1 = {
+x: ["Innaugural Reports", "By End of First Year of EdReport's Full K-12 Coverage", "By end of 2024"],
+y: [41, 50, 52],
+text: ["Innaugural Reports", "By End of First Year of EdReport's Full K-12 Coverage", "By end of 2024"],
+type: "bar",
+font: {
+  family: "'Proxima Nova', gotham, 'open sans', sans-serif",
+},
+tickangle: 0,
+marker: {
+  color: "rgba(10,62,89, 1)",
+},
+}
 
-const elaData = [{
-  x:elaxArray,
-  y:elayArray,
-  type:"bar"
-}];
-
-const elaLayout = {
-  yaxis:{title:"Percentage", range:[40, 54]}
-};
+var elaData =[trace1];
+var elaLayout = {
+  
+  yaxis: {title:"Percentage", range:[35, 55]},
+  xaxis: {
+    tickangle: 0,
+    type: "cateory",
+    tickmode: "array",
+    tickvals: [0,1,2],
+    ticktext: ["2016", "2017", "By End of 2024"],
+    text: ["Innaugural Reports", "By End of First Year of EdReport's Full K-12 Coverage", "By end of 2024"]
+    }
+}
 
 Plotly.newPlot("elaPlot", elaData, elaLayout);
 
