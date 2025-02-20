@@ -31,18 +31,47 @@
 //   }
 // });
 
+// ELA
+const elaxArray = ["2016: Innaugural Reports, Grades 3-8 Only", "2017: By end of first year of EdReports' full K-12 Coverage", "By end of 2024"];
+const elayArray = [41, 50, 52];
 
-const xArray = ["2016: Innaugural Year, Grades K-8 Only", "2017: By end of first year of EdReports' full K-12 Coverage", "By end of 2024"];
-const yArray = [41, 50, 52];
-
-const data = [{
-  x:xArray,
-  y:yArray,
+const elaData = [{
+  x:elaxArray,
+  y:elayArray,
   type:"bar"
 }];
 
-const layout = {
+const elaLayout = {
   yaxis:{title:"Percentage", range:[40, 54]}
 };
 
-Plotly.newPlot("myPlot", data, layout);
+Plotly.newPlot("elaPlot", elaData, elaLayout);
+
+// MATH
+const mathxArray = ["2015: Innaugural Reports, Grades K-8 Only", "2016: By end of first year of EdReports' full K-12 Coverage", "By end of 2024"];
+const mathyArray = [14, 16, 52];
+
+const mathData = [{
+  x:mathxArray,
+  y:mathyArray,
+  type:"bar"
+}];
+
+const mathLayout = {
+  yaxis:{title:"Percentage", range:[10, 60]}
+};
+Plotly.newPlot("mathPlot", mathData, mathLayout);
+
+// SCIENCE
+const scixArray = ["2019: Innaugural Reports, Grades 6-8 Only", "2023: By end of first year of EdReports' full K-12 Coverage", "By end of 2024"];
+const sciyArray = [17, 27, 33];
+const sciData = [{
+  x:scixArray,
+  y:sciyArray,
+  type:"bar"
+}];
+const sciLayout = {
+  yaxis:{title:"Percentage", range:[10, 40]}
+};
+
+Plotly.newPlot("sciPlot", sciData, sciLayout);
