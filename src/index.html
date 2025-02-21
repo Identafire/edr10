@@ -859,14 +859,14 @@ JOURNEY SECTION
 <!--------- accordion timeline start ----------->
 <div class="container col-8 mt-8 mx-auto bg-primary text-light rounded-6 p-5"> 
   
-  <div class="legend-container d-flex col-sm-10 mx-auto justify-content-between">
-    <h2>Timeline</h2>
-    <ul class="col-sm-8 d-flex list-unstyled justify-content-between">
-      <li>Innovation</li>
-      <li>Report</li>
-      <li>Milestone</li>
-      <li>Document</li>
-      <li>Tools</li>
+  <div class="legend-container d-flex col-sm-8 mx-auto justify-content-between w-100">
+    <h2 class="d-inline-flex">Timeline</h2>
+    <ul class="accordion-legend list-unstyled d-inline-flex">
+      <li class="pe-5"><span class="icon innovation"></span>Innovation</li>
+      <li class="pe-5"><span class="icon report"></span>Report</li>
+      <li class="pe-5"><span class="icon milestone"></span>Milestone</li>
+      <li class="pe-5"><span class="icon document"></span>Document</li>
+      <li class="pe-5"><span class="icon tool"></span>Tool</li>
     </ul>
   </div>
   <div class="col-10 mx-auto">
@@ -875,24 +875,27 @@ JOURNEY SECTION
     <h3>2014</h3>
     <!-- /year -->
     <!-- item -->
-    <div class="accordion-item milestone innovation">
+    <div class="accordion-item innovation">
       <h4 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          EdReports officially founded
+          <span class="icon"></span>EdReports officially founded
         </button>
       </h4>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <div class="row">
-            <div class="col align-content-center">
+            <div class="col-sm align-content-center">
             <p>In 2012, a group of 24 educational thinkers and researchers gathered at a California summit on technology use in K&ndash;12 math. But their focus shifted to a pressing need: a “Consumer Reports for school materials.” Following a period of project scoping, process design, and fundraising, <a href="https://www.the74million.org/article/textbook-adoption-was-once-about-going-to-the-right-dinner-with-publishers-now-edreports-is-disrupting-the-8-billion-industry-by-putting-teachers-in-charge/" target="_blank">EdReports was founded in July 2014</a> to do the work that continues to this day: conducting “by educator, for educator” reviews of curricula for alignment to college-and career-ready standards and other elements of quality such as teacher and student supports.</p>
             </div>
-            <div class="col text-center align-content-center">
-              <div class="accompanyment article shadow p-4">
-                <img src="../src/img/photos/t74-logo.png" alt="The 74 logo">
+            <div class="col-sm-5 text-center align-content-center accompanyment article">
+              <div class="wrapper p-4">
+                <div class="px-5 pb-3">
+                <img class="w-100 height-auto d-inline"  src="../src/img/photos/t74-logo.png" alt="The 74 logo">
+                </div>
                 <h5 class="text-uppercase serif chart-label">Article</h5>
                 <p><a href="https://www.the74million.org/article/textbook-adoption-was-once-about-going-to-the-right-dinner-with-publishers-now-edreports-is-disrupting-the-8-billion-industry-by-putting-teachers-in-charge/">Textbook Adoption Was Once About &lsquo;Going to the Right Dinner&rsquo; With Publishers</a></p></a>
               </div>
+              <div class="tear"></div>
             </div>
           </div>
           <!-- /row -->
@@ -902,10 +905,10 @@ JOURNEY SECTION
     <!-- /item-->
 
     <!-- item -->
-    <div class="accordion-item milestone reports">
+    <div class="accordion-item report">
       <h4 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          First reviews begin: K&ndash;8 math
+          <span class="icon"></span>First reviews begin: K&ndash;8 math
         </button>
       </h4>
       <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -914,17 +917,20 @@ JOURNEY SECTION
             <div class="col align-content-center">
             <p>A total of 19 educators began reviewing 21 K&ndash;8 math programs in August 2014.</p>
             </div>
-            <div class="col text-center align-content-center">
-              <div class="accompanyment quote shadow p-4">
+            <div class="col-sm-5 text-center align-content-center accompanyment quote">
+              <div class="wrapper p-4">
+                <div class="px-5 pb-3">
                 <img src="../src/img/photos/mln-edweek.png" alt="Education Week Logo">
+                </div>
                 <h5 class="text-uppercase serif chart-label">Quote</h5>
                 <figure class="blockquote">
                 <p>“This kind of information is just desperately needed. There's just no question there's immense demand right now.”</p>
-                <figcaption>
+                <figcaption class="blockquote-footer text-primary mt-3">
                   Morgan Polikoff, then assistant professor of education at the University of Southern California, in Los Angeles, speaking to <cite>Education Week</cite>.
                 </figcaption>
                 </figure>
               </div>
+              <div class="tear"></div>
             </div>
           </div>
           <!-- /row -->
@@ -934,13 +940,22 @@ JOURNEY SECTION
     <!-- /item-->
 
 <!-- YEAR -->
-<h3>2015</h3>
-<!-- /year -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2015</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+  </div>
+  <!-- /year -->
+
+
 <!-- item -->
-<div class="accordion-item milestone reports">
+<div class="accordion-item milestone reports light">
   <h4 class="accordion-header">
     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-      EdReports publishes first ever reports
+      <span class="icon"></span>EdReports publishes first ever reports
     </button>
   </h4>
   <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -949,12 +964,15 @@ JOURNEY SECTION
         <div class="col align-content-center">
         <p>The <a href="https://www.edweek.org/teaching-learning/most-math-curricula-found-to-be-out-of-sync-with-common-core/2015/03" target="_self">first reports of K&ndash;8 math materials</a> were published on the EdReports website on March 4, 2015. They comprised 87 grade-level reports, with three of 20 series meeting expectations for alignment.</p>
         </div>
-        <div class="col text-center align-content-center">
-          <div class="accompanyment article shadow p-4">
-            <img src="../src/img/photos/mln-edweek.png" alt="Education Week Logo">
-            <h5 class="text-uppercase serif chart-label">Article</h5>
-            <p><a href="https://www.edweek.org/teaching-learning/most-math-curricula-found-to-be-out-of-sync-with-common-core/2015/03" target="_blank">Most Math Curricula Found to Be Out of Sync With Common Core</a></p></a>
+        <div class="col-sm-5 text-center align-content-center accompanyment article">
+          <div class="wrapper p-4">
+            <div class="px-5 pb-3">
+              <img src="../src/img/photos/mln-edweek.png" alt="Education Week Logo">
+            </div>
+              <h5 class="text-uppercase serif chart-label">Article</h5>
+              <p><a href="https://www.edweek.org/teaching-learning/most-math-curricula-found-to-be-out-of-sync-with-common-core/2015/03" target="_blank">Most Math Curricula Found to Be Out of Sync With Common Core</a></p></a>
           </div>
+          <div class="tear"></div>
         </div>
       </div>
       <!-- /row -->
@@ -962,6 +980,272 @@ JOURNEY SECTION
   </div>
 </div>
 <!-- /item-->
+
+<!-- YEAR -->
+ <div class="row d-flex flex-row-nowrap year">
+<div class="col-1">
+  <h3>2016</h3>
+</div>
+<div class="col-11">
+  <hr>
+</div>
+</div>
+<!-- /year -->
+
+<!-- item -->
+<div class="accordion-item report light">
+  <h4 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <span class="icon"></span>First high school math reports
+    </button>
+  </h4>
+  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>Following our inaugural K&ndash;8 math in 2015, we published our <a href="https://www.edweek.org/teaching-learning/major-publishers-get-poor-reviews-for-high-school-common-core-math-books/2016/06" target="_self"> first ever reviews of high school math materials</a> in May 2016. We had released 14 high school math reports by the end of 2016, of which three met expectations for quality alignment.</p>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+
+<!-- item - report - quote 6 -->
+<div class="accordion-item report light">
+  <h4 class="accordion-header">
+    <!-- update toggle/target/id-->
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseFive">
+      <span class="icon"></span>First ELA reports: grades 3&ndash;8
+    </button>
+  </h4>
+  <!-- update toggle/target/id-->
+  <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>In August 2016, we released our <a href="https://edreports.org/resources/article/edreports-reviews-find-some-ela-textbooks-better-meet-criteria-for-alignment-to-the-common-core-state-standards-than-others" target="_self"> first English Language Arts reports</a>, finding three of seven series to be aligned with quality standards. Building on the success of our K&ndash;12 math reviews and reports, the new ELA reports evaluated materials for standards alignment, text quality and complexity, and usability, including educator supports, lesson structure, and student assessments. </p>
+        </div>
+        <div class="col-sm-8 text-center align-content-center accompanyment quote">
+          <div class="wrapper p-4">
+            <div class="px-5 pb-3">
+              <figure class="blockquote">
+                <p>&ldquo;We have heard from so many teachers and administrators who let us know how our reviews of math materials filled a crucial gap when making purchasing decisions. We are delighted to be able to expand this effort to identify high-quality ELA materials as well.&rdquo;</p>
+                <figcaption class="blockquote-footer mt-3 text-primary">
+                  Eric Hirsch, <cite>EdReports</cite> Executive Director.
+                </figcaption>
+                </figure>
+                <img src="../src/img/photos/head-eric.png" alt="headshot of Eric Hirsch">
+          </div>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+</div>
+
+<!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2017</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- item - report - single column 7 -->
+<div class="accordion-item report light">
+  <h4 class="accordion-header">
+    <!-- update toggle/target/id-->
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+      <span class="icon"></span>First high school <abbr title="English Language Arts" class="initialism">ELA</abbr>reports
+    </button>
+  </h4>
+  <!-- update toggle/target/id-->
+  <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>Our <a href="https://www.edweek.org/teaching-learning/watchdog-gives-a-scarlet-letter-to-some-high-school-literature-curricula/2017/09" target="_self">first reviews of high school ELA curricula were unveiled in February 2017. We released five high school ELA reports across 2017, with two of five meeting expectations for quality alignment</p>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+
+<!-- item - report - single column 8 -->
+<div class="accordion-item document light">
+  <h4 class="accordion-header">
+    <!-- update toggle/target/id-->
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+      <span class="icon"></span>First ELA K&ndash;2 school reports
+    </button>
+  </h4>
+  <!-- update toggle/target/id-->
+  <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>Quickly following inaugural high school ELA reports, our <a href="https://www.edreports.org/resources/article/edreports-reviews-of-k-2-ela-materials-reveal-a-range-in-alignment-quality" target="_self"> first reviews of K&ndash;2 ELA materials were released in April 2017. These reports aimed to meet field demand for information about programs that provide a strong foundation for students' literacy skills. Of the first six curricula reviewed, two met expectations for quality alignment.</p>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+  
+
+<!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2018</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- item - report - quote 9-->
+<div class="accordion-item report light">
+  <h4 class="accordion-header">
+    <!-- update toggle/target/id-->
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#collapseNince" aria-expanded="false" aria-controls="collapseNine">
+      <span class="icon"></span>First ELA reports: grades 3&ndash;8
+    </button>
+  </h4>
+  <!-- update toggle/target/id-->
+  <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>In 2018, EdReports published its first comprehensive case study of a district selection process. The study highlighted how  <a href="https://edreports.org/resources/article/edreports-reviews-find-some-ela-textbooks-better-meet-criteria-for-alignment-to-the-common-core-state-standards-than-others" target="_self">Newport-Mesa Unified School District in California</a> used an educator-led approach to select curriculum, leveraging EdReports reviews to empower its adoption team. We have since published multiple <a href="https://www.edreports.org/resources/case-study" target="_self">case studie</a> and spotlights, covering district and state processes in Maryland, Ohio, Rhode Island, Tennessee, Washington, and Wisconsin.</p>
+        </div>
+        <div class="col-sm-8 text-center align-content-center accompanyment quote">
+          <div class="wrapper p-4">
+            <div class="px-5 pb-3">
+              <figure class="blockquote">
+                <p>&ldquo;“Because teachers felt their voices were heard and they were part of the decision, they are really making a very successful roll out of the new materials.&rdquo;</p>
+                <figcaption class="blockquote-footer mt-3 text-primary">
+                  Dr. Duane Cox, Educator, <cite>Newport-Mesa Unified School District</cite>, California
+                </figcaption>
+                </figure>
+                <img src="../src/img/photos/head-duane.png" alt="headshot of Duane Cox">
+          </div>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+</div>
+
+<!-- item - report - single column 9 -->
+<div class="accordion-item document light">
+  <h4 class="accordion-header">
+    <!-- update toggle/target/id-->
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+      <span class="icon"></span>Reports milestone: 90% of K&ndash;12 ELA and math market reviewed
+    </button>
+  </h4>
+  <!-- update toggle/target/id-->
+  <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <div class="row">
+        <div class="col align-content-center">
+        <p>As 2018 came to a close, we had completed nearly 500 grade-level reports across all of K&ndash;12 math and ELA, representing more than <a href="https://www.edreports.org/impact/annual-reports/2018" target="_self"> 90% of the then-known instructional materials market</a>.</p>
+        </div>
+        <div class="tear"></div>
+      </div>
+      <!-- /row -->
+    </div>
+  </div>
+</div>
+<!-- /item-->
+
+
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2019</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2020</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2021</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2022</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2023</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
+
+  <!-- YEAR -->
+<div class="row d-flex flex-row-nowrap year">
+  <div class="col-1">
+    <h3>2024</h3>
+  </div>
+  <div class="col-11">
+    <hr>
+  </div>
+</div>
+  <!-- /year -->
 
 
   </div>
