@@ -453,6 +453,10 @@ abbr {
   font-weight: 400;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
 [data-bs-theme="contrast"] body {
   background-color: #fff;
 }
@@ -12071,7 +12075,6 @@ figure.stat {
 .pillbox {
   border-top-left-radius: 6rem;
   border-top-right-radius: 6rem;
-  min-height: 400px;
 }
 
 .pill {

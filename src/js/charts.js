@@ -1,7 +1,7 @@
 // ELA
 var elaX = [0,1,2];
 var elaY = [41, 50, 52];
-var textList = ["Innaugural Reports,<br>Grades 3\u20138 Only", "By end of first year of<br>EdReports' full K\u201312 Coverage", "By end of 2024"];
+var textList = ["inaugural Reports,<br>Grades 3\u20138 Only", "By end of first year of<br>EdReports' full K\u201312 Coverage", "By end of 2024"];
 
 var elaData = [{
   x:elaX,
@@ -30,7 +30,7 @@ Plotly.newPlot("elaPlot", elaData, elaLayout, {displayModeBar: false, responsive
 // MATH
 var mathX = [0,1,2];
 var mathY = [14, 16, 52];
-var mathTextList = ["Innaugural Reports,<br>Grades K\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
+var mathTextList = ["inaugural Reports,<br>Grades K\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
 
 var mathData = [{
   x:mathX,
@@ -59,7 +59,7 @@ Plotly.newPlot("mathPlot", mathData, mathLayout, {displayModeBar: false, respons
 // sci
 var sciX = [0,1,2];
 var sciY = [17, 27, 33];
-var sciTextList = ["Innaugural Reports,<br>Grades 6\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
+var sciTextList = ["inaugural Reports,<br>Grades 6\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
 
 var sciData = [{
   x:sciX,

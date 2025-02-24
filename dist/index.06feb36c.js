@@ -608,7 +608,7 @@ var elaY = [
     52
 ];
 var textList = [
-    "Innaugural Reports,<br>Grades 3\u20138 Only",
+    "inaugural Reports,<br>Grades 3\u20138 Only",
     "By end of first year of<br>EdReports' full K\u201312 Coverage",
     "By end of 2024"
 ];
@@ -659,7 +659,7 @@ var mathY = [
     52
 ];
 var mathTextList = [
-    "Innaugural Reports,<br>Grades K\U+20148 Only",
+    "inaugural Reports,<br>Grades K\U+20148 Only",
     "By end of first year of<br>EdReports' full K-12 Coverage",
     "By end of year"
 ];
@@ -710,7 +710,7 @@ var sciY = [
     33
 ];
 var sciTextList = [
-    "Innaugural Reports,<br>Grades 6\U+20148 Only",
+    "inaugural Reports,<br>Grades 6\U+20148 Only",
     "By end of first year of<br>EdReports' full K-12 Coverage",
     "By end of year"
 ];
