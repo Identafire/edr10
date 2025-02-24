@@ -449,6 +449,10 @@ abbr {
   display: inline-block;
 }
 
+.lead p {
+  font-weight: 400;
+}
+
 [data-bs-theme="contrast"] body {
   background-color: #fff;
 }
@@ -12186,5 +12190,9 @@ figure.stat {
 
 .btn-light.green:hover path {
   stroke: #9fbd3b;
+}
+
+figcaption.blockquote-footer:before {
+  content: none;
 }
 /*# sourceMappingURL=index.044e704e.css.map */

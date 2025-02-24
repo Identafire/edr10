@@ -481,3 +481,14 @@ $accordion-icon-doc-primary: url('data:image/svg+xml,<svg xmlns="http://www.w3.o
             }
         }
     }
+
+//------------------------------------------------------------------------
+//FIGCAPTION/BLCOKQUOTE
+//------------------------------------------------------------------------
+figcaption{
+    &.blockquote-footer{
+        &::before{
+            content: none;
+        }
+    }
+}
