@@ -11828,35 +11828,6 @@ progress {
   }
 }
 
-.background-shape {
-  z-index: -1;
-  width: 110vw;
-  height: 110vw;
-  position: fixed;
-}
-
-@keyframes rotating {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotating {
-  animation: 300s linear infinite rotating;
-}
-
-.rotating.medium-speed {
-  animation-duration: 150s;
-}
-
-.rotating.fast-speed {
-  animation-duration: 75s;
-}
-
 .nav {
   max-width: 100px;
 }
@@ -12197,5 +12168,39 @@ figure.stat {
 
 figcaption.blockquote-footer:before {
   content: none;
+}
+
+.js-plotly-plot .plotly, .js-plotly-plot, .plotly div {
+  font-weight: 500;
+  font-family: Proxima Nova, gotham, open sans, helvetica, arial, sans-serif !important;
+}
+
+.background-shape {
+  z-index: -1;
+  width: 110vw;
+  height: 110vw;
+  position: fixed;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: 300s linear infinite rotating;
+}
+
+.rotating.medium-speed {
+  animation-duration: 150s;
+}
+
+.rotating.fast-speed {
+  animation-duration: 75s;
 }
 /*# sourceMappingURL=index.044e704e.css.map */

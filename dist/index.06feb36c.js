@@ -608,7 +608,7 @@ var elaY = [
     52
 ];
 var textList = [
-    "inaugural Reports,<br>Grades 3\u20138 Only",
+    "Inaugural Reports,<br>Grades 3\u20138 Only",
     "By end of first year of<br>EdReports' full K\u201312 Coverage",
     "By end of 2024"
 ];
@@ -629,6 +629,10 @@ var elaData = [
     }
 ];
 var elaLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "ELA Percentage"
     },
@@ -659,7 +663,7 @@ var mathY = [
     52
 ];
 var mathTextList = [
-    "inaugural Reports,<br>Grades K\U+20148 Only",
+    "Inaugural Reports,<br>Grades K\U+20148 Only",
     "By end of first year of<br>EdReports' full K-12 Coverage",
     "By end of year"
 ];
@@ -680,6 +684,10 @@ var mathData = [
     }
 ];
 var mathLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Math Percentage"
     },
@@ -710,7 +718,7 @@ var sciY = [
     33
 ];
 var sciTextList = [
-    "inaugural Reports,<br>Grades 6\U+20148 Only",
+    "Inaugural Reports,<br>Grades 6\U+20148 Only",
     "By end of first year of<br>EdReports' full K-12 Coverage",
     "By end of year"
 ];
@@ -731,6 +739,10 @@ var sciData = [
     }
 ];
 var sciLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Science Percentage"
     },
@@ -783,6 +795,10 @@ var twentyNineteenPgViewData = [
     }
 ];
 var twentyNineteenPgViewLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Views"
     },
@@ -832,6 +848,10 @@ var twentyOnePgViewData = [
     }
 ];
 var twentyOnePgViewLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Views"
     },
@@ -885,6 +905,10 @@ var twentyThreePgViewData = [
     }
 ];
 var twentyThreePgViewLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Views"
     },
@@ -939,6 +963,10 @@ var twentyTwoBPgViewData = [
     }
 ];
 var twentyTwoBPgViewLayout = {
+    font: {
+        size: 14,
+        color: "rgba(10,62,89,1)"
+    },
     yaxis: {
         title: "Views"
     },

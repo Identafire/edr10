@@ -1,7 +1,7 @@
 // ELA
 var elaX = [0,1,2];
 var elaY = [41, 50, 52];
-var textList = ["inaugural Reports,<br>Grades 3\u20138 Only", "By end of first year of<br>EdReports' full K\u201312 Coverage", "By end of 2024"];
+var textList = ["Inaugural Reports,<br>Grades 3\u20138 Only", "By end of first year of<br>EdReports' full K\u201312 Coverage", "By end of 2024"];
 
 var elaData = [{
   x:elaX,
@@ -15,14 +15,18 @@ var elaData = [{
 }];
 
 var elaLayout = {
+  font: {
+    size: 14,
+    color: "rgba(10,62,89,1)",
+  },
   yaxis:{
-    title:"ELA Percentage"
+    title:"ELA Percentage",
   },
   xaxis: {
     tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2],
-    ticktext: textList
+    ticktext: textList,
   }
 };
 Plotly.newPlot("elaPlot", elaData, elaLayout, {displayModeBar: false, responsive: true});
@@ -30,7 +34,7 @@ Plotly.newPlot("elaPlot", elaData, elaLayout, {displayModeBar: false, responsive
 // MATH
 var mathX = [0,1,2];
 var mathY = [14, 16, 52];
-var mathTextList = ["inaugural Reports,<br>Grades K\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
+var mathTextList = ["Inaugural Reports,<br>Grades K\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
 
 var mathData = [{
   x:mathX,
@@ -44,6 +48,10 @@ var mathData = [{
 }];
 
 var mathLayout = {
+  font: {
+    size: 14,
+    color: "rgba(10,62,89,1)",
+  },
   yaxis:{
     title:"Math Percentage"
   },
@@ -59,7 +67,7 @@ Plotly.newPlot("mathPlot", mathData, mathLayout, {displayModeBar: false, respons
 // sci
 var sciX = [0,1,2];
 var sciY = [17, 27, 33];
-var sciTextList = ["inaugural Reports,<br>Grades 6\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
+var sciTextList = ["Inaugural Reports,<br>Grades 6\U+20148 Only", "By end of first year of<br>EdReports' full K-12 Coverage", "By end of year"];
 
 var sciData = [{
   x:sciX,
@@ -73,6 +81,10 @@ var sciData = [{
 }];
 
 var sciLayout = {
+  font: {
+    size: 14,
+    color: "rgba(10,62,89,1)",
+  },
   yaxis:{
     title:"Science Percentage"
   },
@@ -104,6 +116,10 @@ var twentyNineteenPgViewData = [{
 }];
 
 var twentyNineteenPgViewLayout = {
+  font: {
+    size: 14,
+    color: "rgba(10,62,89,1)",
+  },
   yaxis:{
     title:"Views"
   },
@@ -134,6 +150,10 @@ var twentyOnePgViewData = [{
 }];
 
 var twentyOnePgViewLayout = {
+  font: {
+    size: 14,
+    color: "rgba(10,62,89,1)",
+  },
   yaxis:{
     title:"Views"
   },
@@ -165,6 +185,10 @@ Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData,
   }];
   
   var twentyThreePgViewLayout = {
+    font: {
+      size: 14,
+      color: "rgba(10,62,89,1)",
+    },
     yaxis:{
       title:"Views"
     },
@@ -195,6 +219,10 @@ Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData,
   }];
   
   var twentyTwoBPgViewLayout = {
+    font: {
+      size: 14,
+      color: "rgba(10,62,89,1)",
+    },
     yaxis:{
       title:"Views"
     },

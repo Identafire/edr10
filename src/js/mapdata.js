@@ -654,9 +654,9 @@ var simplemaps_usmap_mapdata={
         "VA",
         "WV"
       ],
-      name: "Does Not Utilize EdReports' Work",
+      name: "Does Not Use EdReports as a Resource",
       color: "#899FA8",
-      description: "Does Not Utilize EdReports' Work",
+      description: "Does Not Use EdReports as a Resource",
       zoomable: "no"
     }
   }
