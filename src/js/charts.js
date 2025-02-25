@@ -178,3 +178,33 @@ Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData,
   Plotly.newPlot("twentyThreePgViewPlot", twentyThreePgViewData, 
     twentyThreePgViewLayout, 
     {displayModeBar: false, responsive: true});
+
+// twentyTwoBPgView
+  var twentyTwoBPgViewX = [0,1,2,3,4];
+  var twentyTwoBPgViewY = ['500,000', '2,000,000', '5,000,000', '10,000,000','15,000,000'];
+  var twentyTwoBPgViewTextList = ["2015", "2017", "2019","2021","2023"];
+  
+  var twentyTwoBPgViewData = [{
+    x:twentyTwoBPgViewX,
+    y:twentyTwoBPgViewY,
+    type:"line",
+    responsive: true,
+    marker: {
+      color: "rgba(10,62,89,1",
+    },
+  }];
+  
+  var twentyTwoBPgViewLayout = {
+    yaxis:{
+      title:"Views"
+    },
+    xaxis: {
+      tickangle: 0,
+      tickmode: "array",
+      tickvals: [0,1,2,3,4],
+      ticktext: twentyTwoBPgViewTextList
+    }
+  };
+  Plotly.newPlot("twentyTwoBPgViewPlot", twentyTwoBPgViewData, 
+    twentyTwoBPgViewLayout, 
+    {displayModeBar: false, responsive: true});
