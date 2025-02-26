@@ -12048,12 +12048,10 @@ figure.stat {
   border-top-right-radius: 6rem;
 }
 
-.pill {
-  max-height: 200px;
-}
-
-.button-shape-container {
-  margin-top: -10px;
+@media (width >= 992px) {
+  .pill {
+    max-height: 200px;
+  }
 }
 
 .button-shape-container .btn-caret {

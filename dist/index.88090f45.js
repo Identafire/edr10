@@ -596,11 +596,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"2DotB":[function(require,module,exports,__globalThis) {
-const impactCarouselElement = document.querySelector('#impactCarousel');
-const carousel = new bootstrap.Carousel(impactCarouselElement, {
-    interval: 2000,
-    touch: true
-});
+// const impactCarouselElement = document.querySelector('#impactCarousel')
+// const carousel = new bootstrap.Carousel(impactCarouselElement, {
+//   interval: 2000,
+//   touch: true
+// });
 const spotlightCarouselElement = document.querySelector('#spotlightCarousel');
 const spotlightCarousel = new bootstrap.Carousel(spotlightCarouselElement, {
     interval: 2000,
