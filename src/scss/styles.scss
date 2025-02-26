@@ -75,6 +75,10 @@
 @include media-breakpoint-up(md) {
     #mainNav{
         width: 195px;
+        border-top-left-radius: 4rem;
+        border-bottom-left-radius: 4rem;
+        padding-top: 3rem;
+        padding-left: 2rem;
     }
 }
 
@@ -139,8 +143,95 @@ li{
 
 //------------------------------------------------------------------------
 //headers
+//
+// Extra small	None	<576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px
 //------------------------------------------------------------------------
 
+
+
+.headertext{
+    &.one{
+        margin-left: -20%;
+    }
+    &.two{
+        margin-top: -13%;
+        margin-left: -25%;
+    }
+}
+.headertext-mob{
+    &.one{
+        margin-left: -5%;
+    }
+    &.two{
+        margin-top: -5%;
+        margin-left: -7%;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .hero-intro{
+        margin-top: -13rem;
+    }
+    .headertext{
+        &.one{
+            margin-left: -20%;
+        }
+        &.two{
+            margin-top: -13%;
+            margin-left: -25%;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .hero-intro{
+        margin-top: -7rem;
+    }
+    .headertext{
+        &.one{
+            margin-left: -20%;
+        }
+        &.two{
+            margin-top: -13%;
+            margin-left: -25%;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .hero-intro{
+        margin-top: -7rem;
+    }
+    .headertext{
+        &.one{
+            margin-left: -20%;
+        }
+        &.two{
+            margin-top: -13%;
+            margin-left: -25%;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .hero-intro{
+        margin-top: -4rem;
+    }
+    .headertext{
+        &.one{
+            margin-left: -20%;
+        }
+        &.two{
+            margin-top: -13%;
+            margin-left: -25%;
+        }
+    }
+}
 
 .section-header{
     .gradient-mask{

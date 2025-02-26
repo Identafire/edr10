@@ -11852,7 +11852,11 @@ progress {
 
 @media (width >= 768px) {
   #mainNav {
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
     width: 195px;
+    padding-top: 3rem;
+    padding-left: 2rem;
   }
 }
 
@@ -11898,6 +11902,84 @@ progress {
 
 .nav li.future:hover path.outer, .nav li.future:active path.outer, .nav li.future:focus path.outer, .nav li.future:hover path.inner, .nav li.future:active path.inner, .nav li.future:focus path.inner {
   fill: #9fbd3b;
+}
+
+.headertext.one {
+  margin-left: -20%;
+}
+
+.headertext.two {
+  margin-top: -13%;
+  margin-left: -25%;
+}
+
+.headertext-mob.one {
+  margin-left: -5%;
+}
+
+.headertext-mob.two {
+  margin-top: -5%;
+  margin-left: -7%;
+}
+
+@media (width >= 1200px) {
+  .hero-intro {
+    margin-top: -13rem;
+  }
+
+  .headertext.one {
+    margin-left: -20%;
+  }
+
+  .headertext.two {
+    margin-top: -13%;
+    margin-left: -25%;
+  }
+}
+
+@media (width >= 992px) {
+  .hero-intro {
+    margin-top: -7rem;
+  }
+
+  .headertext.one {
+    margin-left: -20%;
+  }
+
+  .headertext.two {
+    margin-top: -13%;
+    margin-left: -25%;
+  }
+}
+
+@media (width >= 768px) {
+  .hero-intro {
+    margin-top: -7rem;
+  }
+
+  .headertext.one {
+    margin-left: -20%;
+  }
+
+  .headertext.two {
+    margin-top: -13%;
+    margin-left: -25%;
+  }
+}
+
+@media (width >= 576px) {
+  .hero-intro {
+    margin-top: -4rem;
+  }
+
+  .headertext.one {
+    margin-left: -20%;
+  }
+
+  .headertext.two {
+    margin-top: -13%;
+    margin-left: -25%;
+  }
 }
 
 .section-header .gradient-mask {
