@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="scss/styles.scss">
     <link rel="stylesheet" href="https://use.typekit.net/zme5bdl.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <!-- <script type="module" src="js/main.js"></script> -->
     <script type="module" src="js/motion-switch.js"></script>
     <script type="module" src="js/contrast-switch.js"></script>
@@ -30,19 +31,19 @@
 NAVIGATION
 ----------------------------->
 
-   <!-- navigation -->
-<div class="flex-shrink-0 px-4 py-5 position-fixed end-0 rounded-start-6 border border-2 border-end-0 border-primary bg-white text-primary" style="width: 195px; z-index: 100">
-  <h2 class="nav-label sans fs-7 fw-bold">Navigation</h2>
+<!-- navigation -->
+<div id="mainNav" class="position-fixed end-0 border border-2 border-end-0 border-primary bg-white text-primary close">
+  <h2 class="nav-label sans fs-7 fw-bold">Nav<span class="igation">igation</span></h2>
   <ul class="list-unstyled ps-0">
     <li class="mb-1">
-      <button class="btn btn-toggle d-inline-flex align-items-center border-0 p-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+      <button id="navButton" class="btn btn-toggle d-inline-flex align-items-center border-0 p-0" onclick="clickToOpen()" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
           <g fill="#0a3e59">
             <path data-name="Rectangle 84" d="M0 0h25v5H0z"/>
             <path data-name="Rectangle 85" d="M0 10h25v5H0z"/>
             <path data-name="Rectangle 86" d="M0 20h25v5H0z"/>
           </g>
-        </svg><span class="ms-2 nav-label">Open</span>
+        </svg><span class="ms-2 nav-label igation">Open</span>
       </button>
       <div class="collapse" id="home-collapse">
         <ul class="nav btn-toggle-nav list-unstyled fw-normal p-3 small text-center border border-primary border-2 rounded-6 my-3">
@@ -61,14 +62,19 @@ NAVIGATION
             <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mt-1" width="32.848" height="36.805" viewBox="0 0 32.848 36.805"><g class="group" transform="translate(32.848) rotate(90)"><path class="outer" d="M 29.06403541564941 31.84766006469727 L 7.741176128387451 31.84766006469727 L 1.195177674293518 12.94213962554932 L 18.4026050567627 1.210305333137512 L 35.61004257202148 12.94213962554932 L 29.06403541564941 31.84766006469727 Z"/><path class="inner" d="M 18.4026050567627 2.420610427856445 L 2.390342712402344 13.33758926391602 L 8.453176498413086 30.84766006469727 L 28.3520336151123 30.84766006469727 L 34.41485977172852 13.33758926391602 L 18.4026050567627 2.420610427856445 M 18.4026050567627 0 L 36.80520629882812 12.54668998718262 L 29.77603530883789 32.84766006469727 L 7.0291748046875 32.84766006469727 L -3.814697265625e-06 12.54668998718262 L 18.4026050567627 0 Z"/></g></svg>
             </a></li>
         </ul>
+        <ul class="nav d-block d-md-none unstyled-list">
+          <li class="border-top my-3 border-primary"></li>
+          <li><a class="nav-label fw-bold" href="#top">Back to Top</a></li>
+          <li class="border-top my-3 border-primary"></li>
+        </ul>
       </div>
     </li>
-    <li class="border-top my-3 border-primary"></li>
-    <li><a class="nav-label fw-bold" href="#top">Back to Top</a></li>
-    <li class="border-top my-3 border-primary"></li>
+    <li class="border-top my-3 border-primary d-none d-md-block"></li>
+    <li><a class="nav-label fw-bold d-none d-md-block" href="#top">Back to Top</a></li>
+    <li class="border-top my-3 border-primary d-none d-md-block"></li>
     <li class="mb-1">
       <!-- page motion control starts -->
-      <div class="form-check form-switch">
+      <div class="form-check form-switch pt-3 pt-md-3 d-none d-md-block">
         <label class="form-check-label nav-label fs-7 mb-2" for="motionSwitch">Reduce Page Motion</label>
         <input class="form-check-input" type="checkbox" id="mySwitchMotion" name="motion" value="off">
       </div>
@@ -85,12 +91,17 @@ NAVIGATION
 </div>
 <!-- nav end -->
 
+<div id="motion2" class="form-check form-switch d-block d-md-none position-fixed bottom-0 end-0 rounded-start-6 align-content-center align-items-center">
+  <label class="form-check-label nav-label p-1" for="motionSwitch">Reduce Page Motion</label>
+  <input class="form-check-input mobile-input" type="checkbox" id="mySwitchMotion2" name="motion" value="off">
+</div>
+
 <!----------------------------
 HERO
 ----------------------------->
     
     <!-- hero start -->
-    <div class="col-sm-10 py-5 text-center container text-bg-dark bg-primary rounded-6 z-1 mt-3">
+    <div class="col-sm-10 py-5 text-center container text-bg-dark bg-primary rounded-6 z-1 mt-3 mx-2 mx-md-auto">
       <h1 class="display-5 fw-bold">Celebrating a Decade<br> of EdReports Impact</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4 fw-bold">Since the launch of our first free reports in 2015, EdReports has been dedicated to improving the quality of K&ndash;12 instructional materials, ensuring every student has access to the content they need to succeed in college, careers, and beyond. As we mark our 10-year milestone, we continue our commitment to driving excellence in education, championing innovation, and partnering with educators to shape the future of learning.</p>
@@ -125,7 +136,7 @@ IMPACT SECTION
 <!-------- impact header ----------->
 <section class="impact">
   <div id="impact" class="section-header">
-    <div class="container col-md-10 bg-mauve-light rounded-6 text-center text-light mt-5 p-0 z-1">
+    <div class="container col-md-10 bg-mauve-light rounded-6 text-center text-light mt-5 p-0 z-1 mx-2 mx-md-auto">
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
     <!-- heading -->
@@ -157,7 +168,7 @@ IMPACT SECTION
   </div>
 
   <!-- intro -->
-  <div class="container col-sm-8 mx-auto d-flex">
+  <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
       <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
         <figure>
@@ -183,7 +194,7 @@ IMPACT SECTION
   <!-- /intro -->
 
   <!------------------ stats ----------------->
-  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
+  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent mx-2 mx-md-auto">
     <div class="row d-flex justify-items-center justify-content-center w-100">
       <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
         <figure class="stat mt-2 z-6">
@@ -205,7 +216,7 @@ IMPACT SECTION
   </div>
   <!-- /stats -->
   <!------------------ impact carousel --------------------->
-    <div class="container col-sm-8 mt-5 bg-mauve rounded-6 p-5">
+    <div class="container col-sm-8 mt-5 bg-mauve rounded-6 p-5 mx-2 mx-md-auto">
     <div class="text-primary slide">
       <div class="carousel-inner bg-white rounded-5 p-3">
         <h3 class="d-flex align-content-center align-items-center h1">
@@ -249,7 +260,7 @@ IMPACT SECTION
   </div>
 
   <!-- intro -->
-  <div class="container col-sm-8 mx-auto d-flex">
+  <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
       <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
         <figure>
@@ -275,7 +286,7 @@ IMPACT SECTION
   <!-- /intro -->
 
   <!-- stats -->
-  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
+  <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent mx-2 mx-md-auto">
     <div class="row d-flex justify-items-center justify-content-center w-100">
       <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
         <figure class="stat mt-2 z-6 p-3">
@@ -333,7 +344,7 @@ IMPACT SECTION
   </div>
 
   <!-- intro -->
-  <div class="container col-sm-8 mx-auto d-flex">
+  <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
       <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
         <figure>
@@ -360,11 +371,11 @@ IMPACT SECTION
 
   <!------------------ pillbox: 43 ----------------->
  
-    <div class="container pillbox rounded-100 outline-mauve mt-5 bg-white p-0">
+    <div class="container-fluid col-12 col-md-8 pillbox rounded-100 outline-mauve mt-5 bg-white p-0 mx-2 mx-md-auto">
       <!-- pill -->
       <div class="pill row justify-content-between align-items-center rounded-100 text-center bg-mauve mx-auto outline-mauve w-100">
         <!-- square -->
-          <div class="col-xl-2 col-md-3 col-sm-12 align-items-center mt-sm-3 mt-md-0 d-none d-md-block">
+          <div class="col-md-3 col-sm-12 align-items-center mt-sm-3 mt-md-0 d-none d-md-block">
               <div class="mt-n6">
                 <svg class="rotating fast-speed z-4" xmlns="http://www.w3.org/2000/svg" width="200" height="230" viewBox="0 0 244.07 244.07">
                   <rect class="shadow" width="187.488" height="187.488" transform="translate(0 70.234) rotate(-22)" fill="#fff" stroke="#501141"/>
@@ -375,13 +386,13 @@ IMPACT SECTION
         <!-- /square -->
 
         <!--body-->
-        <div class="col-xl-8 col-md-6 col-sm-12 text-light align-items-center lead py-4 py-lg-0 order-1 order-md-1">
+        <div class="col-md-6 col-sm-12 text-light align-items-center lead pt-4 pb-0 py-lg-0 order-1 order-md-1">
               <p>43 states have drawn on EdReports&rsquo; work to promote awareness and selection of high-quality materials since 2015. This includes 37 states that list EdReports as a resource and 16 with which we've collaborated directly.</p>
           </div>
         <!--/body-->
 
         <!--icon -->
-          <div class="col-xl-2 col-md-3 col-sm-12 align-items-center py-xl-3 py-lg-3 order-lg-3 order-2 order-sm-1 pt-3">
+          <div class="col-md-3 col-sm-12 align-items-center py-xl-3 py-lg-3 pt-sm-0 pb-3 order-lg-3 order-2 order-sm-1 pt-3">
               <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
           </div>
         <!-- /icon -->
@@ -389,11 +400,12 @@ IMPACT SECTION
       </div>
       
     
-      <div class="container d-flex my-5">
-        <div class="col-sm order-sm-1">
+      <div class="container my-5">
+        <div class="row">
+        <div class="col-sm-12 col-md-9 order-md-1">
           <div id="map"></div>
         </div>
-        <div id="legend-container" class="col-sm-3 legend order-0">
+        <div id="legend-container" class="col-sm-12 col-md-3 legend order-0">
           <ul class="list-unstyled d-flex flex-column text-primary">
             <li class="chart-label d-flex py-3">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-100" width="49" height="49" viewBox="0 0 49 49">
@@ -410,33 +422,42 @@ IMPACT SECTION
           </ul>
         </div>
       </div>
-
+    </div>
     <!-- pillbox end -->
     </div>
 </div>
 
 
-  <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-mauve mt-5 bg-white">
-    <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-mauve mt-n1">
-      <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
-        <div class="text-light d-flex flex-fill align-items-center align-content-center w-100 lead py-4 justify-content-between">
-          <div class="col">
-          <h3>Supporting State Innovation</h3>
-            <p class="lead">EdReports has collaborated on multiple initiatives with the High-Quality Instructional Materials and Professional Development (IMPD) Network and its member states since its 2017 inception.</p>
-          </div>
-        </div>
-        <div class="d-inline-flex align-items-center">
-            <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
-        </div>
-      <!--  /wrapper -->
+<!------------------ pillbox: supporting state innovation ----------------->
+ 
+<div class="container-fluid col-12 col-md-8 pillbox rounded-100 outline-mauve mt-5 bg-white p-0 mx-2 mx-md-auto">
+  <!-- pill -->
+  <div class="pill row justify-content-between align-items-center rounded-100 text-center bg-mauve mx-auto outline-mauve w-100">
+    <!--body-->
+    <div class="col-md-9 col-sm-12 text-light align-items-center lead pt-4 pb-0 py-lg-0 order-1 order-md-1">
+      <h3>Supporting State Innovation</h3>
+      <p class="lead">EdReports has collaborated on multiple initiatives with the High-Quality Instructional Materials and Professional Development (IMPD) Network and its member states since its 2017 inception.</p>
       </div>
-    <!-- /container -->
-    </div>
-    <div class="container my-4 text-center mt-n1 p-2">
-      <a href="#" class="lead mt-3 d-block fw-bold">Learn more about the IMPD Network and its impact ></a>
-     </div>
+    <!--/body-->
 
-  <!-- pillbox end -->
+    <!--icon -->
+      <div class="col-md-3 col-sm-12 align-items-center py-xl-3 py-lg-3 pt-sm-0 pb-3 order-lg-3 order-2 order-sm-1 pt-3">
+          <img src="../src/img/photos/icon-books.png" alt="illustration of several books on a shelf">
+      </div>
+    <!-- /icon -->
+  <!-- /pill -->
+  </div>
+  
+
+  <div class="container">
+    <div class="row py-3">
+      <a href="#" class="lead mt-3 d-block fw-bold text-center">Learn more about the IMPD Network and its impact ></a>
+  </div>
+</div>
+<!-- pillbox end -->
+</div>
+</div>
+
   </div>
 
   <!-- /stats -->
@@ -444,7 +465,7 @@ IMPACT SECTION
 
 
   
-  <div class="container col-sm-8 mt-5 bg-mauve rounded-6 p-5">
+  <div class="container col-12 col-md-8 mt-5 bg-mauve rounded-6 p-5 mx-2 mx-md-auto">
     <div id="spotlightCarousel" class="carousel carousel-dark text-primary lead slide">
       <div class="carousel-inner bg-white rounded-5 p-3">
         <!-- slide: new mexico -->
@@ -567,7 +588,7 @@ IMPACT SECTION
 </div>
 
 <!-- intro -->
-<div class="container col-sm-8 mx-auto d-flex">
+<div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
     <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
       <figure>
@@ -593,7 +614,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent mx-2 mx-md-auto">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -649,7 +670,7 @@ IMPACT SECTION
 </div>
 
 <!-- intro -->
-<div class="container col-sm-8 mx-auto d-flex">
+<div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
     <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
       <figure>
@@ -676,7 +697,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent mx-2 mx-md-auto">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -732,7 +753,7 @@ IMPACT SECTION
 </div>
 
 <!-- intro -->
-<div class="container col-sm-8 mx-auto d-flex">
+<div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
     <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
       <figure>
@@ -758,7 +779,7 @@ IMPACT SECTION
 <!-- /intro -->
 
  <!-- stats -->
- <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent">
+ <div class="container col-sm-8 mt-5 rounded-6 text-center border-mauve text-primary stats-grid bg-white-transparent mx-2 mx-md-auto">
   <div class="row d-flex justify-items-center justify-content-center w-100">
     <div class="col-sm d-inline-flex justify-content-center align-items-center p-5 z-5">
       <figure class="stat mt-2 z-6 p-3">
@@ -832,7 +853,7 @@ JOURNEY SECTION
 <!-- journey header -->
 <section>
   <div id="journey" class="section-header">
-    <div class="container col-lg-10 bg-orange-light rounded-6 text-center text-light mt-5 p-0 z-1">
+    <div class="container col-lg-10 bg-orange-light rounded-6 text-center text-light mt-5 p-0 z-1 mx-2 mx-md-auto">
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
      <!-- heading -->
@@ -851,7 +872,7 @@ JOURNEY SECTION
       <!-- journey header end -->
 
 <!--------- accordion timeline start ----------->
-<div class="container col-8 mt-8 mx-auto bg-primary text-light rounded-6 p-5"> 
+<div class="container col-8 mt-8 mx-auto bg-primary text-light rounded-6 p-5 mx-2 mx-md-auto"> 
   
   <div class="legend-container col-sm-8 mx-auto w-100">
     <h2 class="w-100 text-center">Timeline</h2>
@@ -1908,7 +1929,7 @@ JOURNEY SECTION
 <!-- future header -->
 <section>
   <div id="future" class="section-header">
-    <div class="container col-8 bg-green-light rounded-6 text-center text-light mt-5 p-0 z-1">
+    <div class="container col-10 bg-green-light rounded-6 text-center text-light mt-5 p-0 z-1 mx-2 mx-md-auto">
       <div class="gradient-mask rounded-6 z-2"></div>
     </div>
      <!-- heading -->
@@ -1926,11 +1947,11 @@ JOURNEY SECTION
   </div>
       <!-- future header end -->
 
-      <div class="col-6 text-primary mx-auto mt-7 text-center lead fw-600">
+      <div class="col-6 text-primary mx-auto mt-7 text-center lead fw-600 mx-2 mx-md-auto">
         <p>Looking ahead to the next decade, our top priority remains the same as it has since 2015: delivering high-quality reviews that shape the creation, selection, and use of excellent instructional materials. Our future focus centers on four key priorities: expanding and refining our reviews, enhancing report accessibility, amplifying thought leadership, and leveraging data-driven insights. Together, these efforts enable EdReports to keep inspiring publishers to raise the bar on materials and empowering school systems to adopt the high-quality curricula every student needs to succeed.</p>
       </div>
 
-      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white mx-2 mx-md-auto">
         <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
             <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
@@ -1950,7 +1971,7 @@ JOURNEY SECTION
       <!-- pillbox end -->
       </div>
 
-      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white mx-2 mx-md-auto">
         <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
             <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
@@ -1971,7 +1992,7 @@ JOURNEY SECTION
       </div>
 
 
-      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white">
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green mt-5 bg-white mx-2 mx-md-auto">
         <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
             <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">
@@ -1990,7 +2011,7 @@ JOURNEY SECTION
       <!-- pillbox end -->
       </div>
 
-      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green my-5 bg-white">
+      <div class="pillbox row col-sm-8 rounded-6 mx-auto outline-green my-5 bg-white mx-2 mx-md-auto">
         <div class="pill container-fluid text-bg-white w-100 rounded-200 text-center bg-green mt-n1 py-3">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-5 rounded-200">
             <div class="text-light d-inline-flex flex-fill align-items-center p-5 lead">

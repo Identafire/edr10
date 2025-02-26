@@ -53,6 +53,30 @@
 //------------------------------------------------------------------------
 //nav
 //------------------------------------------------------------------------
+#mainNav{
+    z-index: 100;
+    width: 60px;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    &.open{
+        width: 195px;
+    }
+}
+#motion2{
+    z-index: 100;
+    background-color: rgba(255,255,255,.7);
+    .form-check-input{
+        margin-left: -2rem;
+        margin-top: 6px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #mainNav{
+        width: 195px;
+    }
+}
 
 .nav{
 max-width: 100px;
@@ -108,9 +132,6 @@ li{
     }
 }
 }
-
-        
-
 
 //------------------------------------------------------------------------
 //hero

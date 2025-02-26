@@ -1,3 +1,31 @@
+const mediaQuery = window.matchMedia('(min-width: 576px)');
+
+function handleMediaQueryChange(event) {
+  if (event.matches) {
+    // The media query matches, execute code for smaller screens
+    console.log('Screen width is 576px or more');
+    $('.igation').removeClass('visually-hidden');
+  } else {
+    // The media query does not match, execute code for larger screens
+    console.log('Screen width is less than 576px');
+    $('.igation').addlass('visually-hidden');
+  }
+}
+
+mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+// Call the handler once to set initial state
+handleMediaQueryChange(mediaQuery);
+
+
+//open switch
+
+function clickToOpen() {
+  $('#mainNav').toggleClass('close');
+  $('#mainNav').toggleClass('open');
+}
+
+
 
 // // import 'bootstrap/js/dist/alert';
 // import 'bootstrap/js/dist/button';

@@ -11828,6 +11828,34 @@ progress {
   }
 }
 
+#mainNav {
+  z-index: 100;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 60px;
+  padding: 1rem;
+}
+
+#mainNav.open {
+  width: 195px;
+}
+
+#motion2 {
+  z-index: 100;
+  background-color: #ffffffb3;
+}
+
+#motion2 .form-check-input {
+  margin-top: 6px;
+  margin-left: -2rem;
+}
+
+@media (width >= 768px) {
+  #mainNav {
+    width: 195px;
+  }
+}
+
 .nav {
   max-width: 100px;
 }
