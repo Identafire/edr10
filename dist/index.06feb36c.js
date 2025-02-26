@@ -629,6 +629,9 @@ var elaData = [
     }
 ];
 var elaLayout = {
+    margin: {
+        b: 150
+    },
     font: {
         size: 14,
         color: "rgba(10,62,89,1)"
@@ -637,7 +640,7 @@ var elaLayout = {
         title: "ELA Percentage"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,
@@ -673,7 +676,7 @@ var mathData = [
         y: mathY,
         type: "bar",
         text: [
-            '2015:<br>41%',
+            '2015:<br>14%',
             '2016:<br>16%',
             '2024:<br>52%'
         ],
@@ -684,6 +687,9 @@ var mathData = [
     }
 ];
 var mathLayout = {
+    margin: {
+        b: 150
+    },
     font: {
         size: 14,
         color: "rgba(10,62,89,1)"
@@ -692,7 +698,7 @@ var mathLayout = {
         title: "Math Percentage"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,
@@ -739,6 +745,9 @@ var sciData = [
     }
 ];
 var sciLayout = {
+    margin: {
+        b: 150
+    },
     font: {
         size: 14,
         color: "rgba(10,62,89,1)"
@@ -747,7 +756,7 @@ var sciLayout = {
         title: "Science Percentage"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,
@@ -803,7 +812,7 @@ var twentyNineteenPgViewLayout = {
         title: "Views"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,
@@ -856,7 +865,7 @@ var twentyOnePgViewLayout = {
         title: "Views"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,
@@ -944,7 +953,7 @@ var twentyTwoBPgViewLayout = {
         title: "Views"
     },
     xaxis: {
-        tickangle: 0,
+        // tickangle: 0,
         tickmode: "array",
         tickvals: [
             0,

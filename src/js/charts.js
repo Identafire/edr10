@@ -15,6 +15,9 @@ var elaData = [{
 }];
 
 var elaLayout = {
+  margin: {
+    b: 150,
+  },
   font: {
     size: 14,
     color: "rgba(10,62,89,1)",
@@ -23,7 +26,7 @@ var elaLayout = {
     title:"ELA Percentage",
   },
   xaxis: {
-    tickangle: 0,
+    // tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2],
     ticktext: textList,
@@ -40,7 +43,7 @@ var mathData = [{
   x:mathX,
   y:mathY,
   type:"bar",
-  text: ['2015:<br>41%','2016:<br>16%','2024:<br>52%'],
+  text: ['2015:<br>14%','2016:<br>16%','2024:<br>52%'],
   textposition: "auto",
   marker: {
     color: "rgba(10,62,89,1)"
@@ -48,6 +51,9 @@ var mathData = [{
 }];
 
 var mathLayout = {
+  margin: {
+    b: 150,
+  },
   font: {
     size: 14,
     color: "rgba(10,62,89,1)",
@@ -56,7 +62,7 @@ var mathLayout = {
     title:"Math Percentage"
   },
   xaxis: {
-    tickangle: 0,
+    // tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2],
     ticktext: textList
@@ -81,6 +87,9 @@ var sciData = [{
 }];
 
 var sciLayout = {
+  margin: {
+    b: 150,
+  },
   font: {
     size: 14,
     color: "rgba(10,62,89,1)",
@@ -89,7 +98,7 @@ var sciLayout = {
     title:"Science Percentage"
   },
   xaxis: {
-    tickangle: 0,
+    // tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2],
     ticktext: textList
@@ -124,7 +133,7 @@ var twentyNineteenPgViewLayout = {
     title:"Views"
   },
   xaxis: {
-    tickangle: 0,
+    // tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2],
     ticktext: twentyNineteenPgViewTextList
@@ -158,7 +167,7 @@ var twentyOnePgViewLayout = {
     title:"Views"
   },
   xaxis: {
-    tickangle: 0,
+    // tickangle: 0,
     tickmode: "array",
     tickvals: [0,1,2,3],
     ticktext: twentyOnePgViewTextList
@@ -227,7 +236,7 @@ Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData,
       title:"Views"
     },
     xaxis: {
-      tickangle: 0,
+      // tickangle: 0,
       tickmode: "array",
       tickvals: [0,1,2,3,4],
       ticktext: twentyTwoBPgViewTextList
