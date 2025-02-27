@@ -148,6 +148,61 @@ li{
 }
 
 //------------------------------------------------------------------------
+//links
+//------------------------------------------------------------------------
+
+a:link{
+    text-decoration-thickness: $text-deco-thickness;
+    font-weight: bold;
+    text-underline-offset: 5px;
+    }
+
+.impact{
+    a{
+        text-decoration-color: $edr-mauve;
+    }
+    a:link, a:visited{
+        text-decoration-color: $edr-mauve;
+    }
+    a:hover, a:active, a:focus{
+        color: $edr-mauve;
+    }
+}
+
+.journey{
+    a{
+        text-decoration-color: $edr-orange;
+    }
+    a:link{
+        text-decoration-color: $edr-orange;
+        color: $primary;
+    }
+    a:hover, a:active, a:focus{
+        color: $edr-orange;
+    }
+    a.link-light{
+        &:link, &:visited{
+            text-decoration-color: $edr-orange !important;
+        }
+        &:hover, &:active, &:focus{
+          text-decoration-color: $edr-orange !important;
+          color: $edr-orange !important;
+        }
+    }
+}
+
+.future{
+    a{
+        text-decoration-color: $edr-green;
+    }
+    a:link, a:visited{
+        text-decoration-color: $edr-green;
+    }
+    a:hover, a:active, a:focus{
+        color: $edr-green;
+    }
+}
+//------------------------------------------------------------------------
 //hero
 //------------------------------------------------------------------------
 
@@ -276,7 +331,7 @@ li{
 //------------------------------------------------------------------------
 
 // stat grid //
-
+.impact, .journey, .future{
 .stats-grid{
     
     *{
@@ -295,9 +350,11 @@ li{
             a{
                 &:link{
                     color: $white;
+                    text-decoration-color: white;
                 }
                 &:hover, &:active, &:focus{
                     color: $edr-yellow-soft;
+                    text-decoration-color: white;
                 }
             }
         }
@@ -324,7 +381,8 @@ figure.stat {
             fill: $primary-soft;
         }
     }
-    //------------------------------------------------------------------------
+}
+ //------------------------------------------------------------------------
 //TYPOGRAPHY
 //------------------------------------------------------------------------
 .chart-label, 

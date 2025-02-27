@@ -11925,6 +11925,50 @@ progress {
   fill: #9fbd3b;
 }
 
+a:link {
+  text-underline-offset: 5px;
+  font-weight: bold;
+  text-decoration-thickness: 3px;
+}
+
+.impact a, .impact a:link, .impact a:visited {
+  text-decoration-color: #501141;
+}
+
+.impact a:hover, .impact a:active, .impact a:focus {
+  color: #501141;
+}
+
+.journey a {
+  text-decoration-color: #f05323;
+}
+
+.journey a:link {
+  color: #0a3e59;
+  text-decoration-color: #f05323;
+}
+
+.journey a:hover, .journey a:active, .journey a:focus {
+  color: #f05323;
+}
+
+.journey a.link-light:link, .journey a.link-light:visited {
+  text-decoration-color: #f05323 !important;
+}
+
+.journey a.link-light:hover, .journey a.link-light:active, .journey a.link-light:focus {
+  color: #f05323 !important;
+  text-decoration-color: #f05323 !important;
+}
+
+.future a, .future a:link, .future a:visited {
+  text-decoration-color: #9fbd3b;
+}
+
+.future a:hover, .future a:active, .future a:focus {
+  color: #9fbd3b;
+}
+
 .headertext.one {
   margin-left: -20%;
 }
@@ -12016,17 +12060,17 @@ progress {
   fill: #9fbd3b;
 }
 
-.stats-grid * {
+.impact .stats-grid *, .journey .stats-grid *, .future .stats-grid * {
   font-weight: bold;
   overflow: visible;
 }
 
-.stats-grid .item {
+.impact .stats-grid .item, .journey .stats-grid .item, .future .stats-grid .item {
   background: none;
   min-height: 274px;
 }
 
-.stats-grid .item:hover, .stats-grid .item:active, .stats-grid .item:focus {
+.impact .stats-grid .item:hover, .impact .stats-grid .item:active, .impact .stats-grid .item:focus, .journey .stats-grid .item:hover, .journey .stats-grid .item:active, .journey .stats-grid .item:focus, .future .stats-grid .item:hover, .future .stats-grid .item:active, .future .stats-grid .item:focus {
   color: #fff;
   background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"273.345\" viewBox=\"0 0 273.345 273.345\"><rect id=\"ui-square-mauve\" width=\"201.073\" height=\"201.073\" transform=\"matrix(0.875, 0.485, -0.485, 0.875, 97.482, 0)\" fill=\"%23501141\"/></svg>");
   background-position: center;
@@ -12034,28 +12078,30 @@ progress {
   overflow: visible;
 }
 
-.stats-grid .item:hover a:link, .stats-grid .item:active a:link, .stats-grid .item:focus a:link {
+.impact .stats-grid .item:hover a:link, .impact .stats-grid .item:active a:link, .impact .stats-grid .item:focus a:link, .journey .stats-grid .item:hover a:link, .journey .stats-grid .item:active a:link, .journey .stats-grid .item:focus a:link, .future .stats-grid .item:hover a:link, .future .stats-grid .item:active a:link, .future .stats-grid .item:focus a:link {
   color: #fff;
+  text-decoration-color: #fff;
 }
 
-.stats-grid .item:hover a:hover, .stats-grid .item:hover a:active, .stats-grid .item:hover a:focus, .stats-grid .item:active a:hover, .stats-grid .item:active a:active, .stats-grid .item:active a:focus, .stats-grid .item:focus a:hover, .stats-grid .item:focus a:active, .stats-grid .item:focus a:focus {
+.impact .stats-grid .item:hover a:hover, .impact .stats-grid .item:hover a:active, .impact .stats-grid .item:hover a:focus, .impact .stats-grid .item:active a:hover, .impact .stats-grid .item:active a:active, .impact .stats-grid .item:active a:focus, .impact .stats-grid .item:focus a:hover, .impact .stats-grid .item:focus a:active, .impact .stats-grid .item:focus a:focus, .journey .stats-grid .item:hover a:hover, .journey .stats-grid .item:hover a:active, .journey .stats-grid .item:hover a:focus, .journey .stats-grid .item:active a:hover, .journey .stats-grid .item:active a:active, .journey .stats-grid .item:active a:focus, .journey .stats-grid .item:focus a:hover, .journey .stats-grid .item:focus a:active, .journey .stats-grid .item:focus a:focus, .future .stats-grid .item:hover a:hover, .future .stats-grid .item:hover a:active, .future .stats-grid .item:hover a:focus, .future .stats-grid .item:active a:hover, .future .stats-grid .item:active a:active, .future .stats-grid .item:active a:focus, .future .stats-grid .item:focus a:hover, .future .stats-grid .item:focus a:active, .future .stats-grid .item:focus a:focus {
   color: #fdd47c;
+  text-decoration-color: #fff;
 }
 
-.stats-grid .item.big:hover {
+.impact .stats-grid .item.big:hover, .journey .stats-grid .item.big:hover, .future .stats-grid .item.big:hover {
   background-image: url("data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"395.015\" height=\"395.015\" viewBox=\"0 0 395.015 395.015\"><rect width=\"280\" height=\"280\" transform=\"translate(211.319) rotate(49)\" fill=\"%23501141\"/></svg>");
   min-height: 280px;
 }
 
-figure.stat {
+.impact figure.stat, .journey figure.stat, .future figure.stat {
   max-width: 200px;
 }
 
-.legend #use-edreports {
+.impact .legend #use-edreports, .journey .legend #use-edreports, .future .legend #use-edreports {
   fill: #0a3e59;
 }
 
-.legend #does-not-use-edreports {
+.impact .legend #does-not-use-edreports, .journey .legend #does-not-use-edreports, .future .legend #does-not-use-edreports {
   fill: #899fa8;
 }
 

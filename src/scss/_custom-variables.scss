@@ -6,6 +6,7 @@
 $primary:       #0A3E59;
 $primary-soft: #899FA8;
 $body-bg:      #E3F6FF;
+$edr-blue-light: #1DA8DE;
 $edr-mauve: #501141;
 $edr-mauve-light: #B071A5;
 $edr-orange: #F05323;
@@ -476,3 +477,21 @@ abbr{
 $list-group-bg: transparent;
 $list-group-color: white;
 $list-group-border-width: 0;
+
+//------------------------------------------------------------------------
+//LINK STYLES  
+//------------------------------------------------------------------------
+
+$text-deco-thickness: 3px;
+
+// @mixin thickLink($linkColor) {
+//     text-decoration-thickness: $text-deco-thickness;
+//     color: $linkColor;
+// }
+// .intro {
+//     p {
+//         a {
+//             @include thickLink('inherit');
+//         }
+//     }
+// }
