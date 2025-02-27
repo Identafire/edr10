@@ -12110,6 +12110,10 @@ a:link {
   letter-spacing: 1px;
 }
 
+abbr {
+  text-decoration: none !important;
+}
+
 .accordion .icon {
   background-position: center;
   background-repeat: no-repeat;
