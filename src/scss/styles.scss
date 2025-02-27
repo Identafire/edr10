@@ -293,6 +293,15 @@ a:link{
     }
 }
 
+@keyframes slideLeft {
+    from{ 
+        margin-left: -100%;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
 #impact.section-header{
     .gradient-mask{
         background-image: url("../img/photos/bkg-impact.png");

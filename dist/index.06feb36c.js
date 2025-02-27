@@ -769,206 +769,132 @@ var sciLayout = {
 Plotly.newPlot("sciPlot", sciData, sciLayout, {
     displayModeBar: false,
     responsive: true
-});
-// twentyNineteenPgView
-var twentyNineteenPgViewX = [
-    0,
-    1,
-    2
-];
-var twentyNineteenPgViewY = [
-    '500,000',
-    '2,000,000',
-    '5,000,000'
-];
-var twentyNineteenPgViewTextList = [
-    "2015",
-    "2017",
-    "2019"
-];
-var twentyNineteenPgViewData = [
-    {
-        x: twentyNineteenPgViewX,
-        y: twentyNineteenPgViewY,
-        type: "line",
-        text: [
-            '2015',
-            '2017',
-            '2019'
-        ],
-        textposition: "auto",
-        responsive: true,
-        marker: {
-            color: "rgba(10,62,89,1)"
-        }
-    }
-];
-var twentyNineteenPgViewLayout = {
-    font: {
-        size: 14,
-        color: "rgba(10,62,89,1)"
-    },
-    yaxis: {
-        title: "Views"
-    },
-    xaxis: {
-        // tickangle: 0,
-        tickmode: "array",
-        tickvals: [
-            0,
-            1,
-            2
-        ],
-        ticktext: twentyNineteenPgViewTextList
-    }
-};
-Plotly.newPlot("twentyNineteenPgViewPlot", twentyNineteenPgViewData, twentyNineteenPgViewLayout, {
-    displayModeBar: false,
-    responsive: true
-});
-// twentyOnePgView
-var twentyOnePgViewX = [
-    0,
-    1,
-    2,
-    3
-];
-var twentyOnePgViewY = [
-    '500,000',
-    '2,000,000',
-    '5,000,000',
-    '10,000,000'
-];
-var twentyOnePgViewTextList = [
-    "2015",
-    "2017",
-    "2019",
-    "2021"
-];
-var twentyOnePgViewData = [
-    {
-        x: twentyOnePgViewX,
-        y: twentyOnePgViewY,
-        type: "line",
-        responsive: true,
-        marker: {
-            color: "rgba(10,62,89,1"
-        }
-    }
-];
-var twentyOnePgViewLayout = {
-    font: {
-        size: 14,
-        color: "rgba(10,62,89,1)"
-    },
-    yaxis: {
-        title: "Views"
-    },
-    xaxis: {
-        // tickangle: 0,
-        tickmode: "array",
-        tickvals: [
-            0,
-            1,
-            2,
-            3
-        ],
-        ticktext: twentyOnePgViewTextList
-    }
-};
-Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData, twentyOnePgViewLayout, {
-    displayModeBar: false,
-    responsive: true
-});
-// twentyThreePgView
-// var twentyThreePgViewX = [0,1,2,3,4];
-// var twentyThreePgViewY = ['500,000', '2,000,000', '5,000,000', '10,000,000','15,000,000'];
-// var twentyThreePgViewTextList = ["2015", "2017", "2019","2021","2023"];
-// var twentyThreePgViewData = [{
-//   x:twentyThreePgViewX,
-//   y:twentyThreePgViewY,
-//   type:"line",
-//   responsive: true,
-//   marker: {
-//     color: "rgba(10,62,89,1",
-//   },
-// }];
-// var twentyThreePgViewLayout = {
-//   font: {
-//     size: 14,
-//     color: "rgba(10,62,89,1)",
-//   },
-//   yaxis:{
-//     title:"Views"
-//   },
-//   xaxis: {
-//     tickangle: 0,
-//     tickmode: "array",
-//     tickvals: [0,1,2,3,4],
-//     ticktext: twentyThreePgViewTextList
-//   }
-// };
-// Plotly.newPlot("twentyThreePgViewPlot", twentyThreePgViewData, 
-//   twentyThreePgViewLayout, 
-//   {displayModeBar: false, responsive: true});
-// twentyTwoBPgView
-var twentyTwoBPgViewX = [
-    0,
-    1,
-    2,
-    3,
-    4
-];
-var twentyTwoBPgViewY = [
-    '500,000',
-    '2,000,000',
-    '5,000,000',
-    '10,000,000',
-    '15,000,000'
-];
-var twentyTwoBPgViewTextList = [
-    "2015",
-    "2017",
-    "2019",
-    "2021",
-    "2023"
-];
-var twentyTwoBPgViewData = [
-    {
-        x: twentyTwoBPgViewX,
-        y: twentyTwoBPgViewY,
-        type: "line",
-        responsive: true,
-        marker: {
-            color: "rgba(10,62,89,1"
-        }
-    }
-];
-var twentyTwoBPgViewLayout = {
-    font: {
-        size: 14,
-        color: "rgba(10,62,89,1)"
-    },
-    yaxis: {
-        title: "Views"
-    },
-    xaxis: {
-        // tickangle: 0,
-        tickmode: "array",
-        tickvals: [
-            0,
-            1,
-            2,
-            3,
-            4
-        ],
-        ticktext: twentyTwoBPgViewTextList
-    }
-};
-Plotly.newPlot("twentyTwoBPgViewPlot", twentyTwoBPgViewData, twentyTwoBPgViewLayout, {
-    displayModeBar: false,
-    responsive: true
-});
+}); // // twentyNineteenPgView
+ // var twentyNineteenPgViewX = [0,1,2];
+ // var twentyNineteenPgViewY = ['500,000', '2,000,000', '5,000,000'];
+ // var twentyNineteenPgViewTextList = ["2015", "2017", "2019"];
+ // var twentyNineteenPgViewData = [{
+ //   x:twentyNineteenPgViewX,
+ //   y:twentyNineteenPgViewY,
+ //   type:"line",
+ //   text: ['2015','2017','2019'],
+ //   textposition: "auto",
+ //   responsive: true,
+ //   marker: {
+ //     color: "rgba(10,62,89,1)"
+ //   }
+ // }];
+ // var twentyNineteenPgViewLayout = {
+ //   font: {
+ //     size: 14,
+ //     color: "rgba(10,62,89,1)",
+ //   },
+ //   yaxis:{
+ //     title:"Views"
+ //   },
+ //   xaxis: {
+ //     // tickangle: 0,
+ //     tickmode: "array",
+ //     tickvals: [0,1,2],
+ //     ticktext: twentyNineteenPgViewTextList
+ //   }
+ // };
+ // Plotly.newPlot("twentyNineteenPgViewPlot", twentyNineteenPgViewData, 
+ //   twentyNineteenPgViewLayout, 
+ //   {displayModeBar: false, responsive: true});
+ //   // twentyOnePgView
+ // var twentyOnePgViewX = [0,1,2,3];
+ // var twentyOnePgViewY = ['500,000', '2,000,000', '5,000,000', '10,000,000'];
+ // var twentyOnePgViewTextList = ["2015", "2017", "2019","2021"];
+ // var twentyOnePgViewData = [{
+ //   x:twentyOnePgViewX,
+ //   y:twentyOnePgViewY,
+ //   type:"line",
+ //   responsive: true,
+ //   marker: {
+ //     color: "rgba(10,62,89,1",
+ //   },
+ // }];
+ // var twentyOnePgViewLayout = {
+ //   font: {
+ //     size: 14,
+ //     color: "rgba(10,62,89,1)",
+ //   },
+ //   yaxis:{
+ //     title:"Views"
+ //   },
+ //   xaxis: {
+ //     // tickangle: 0,
+ //     tickmode: "array",
+ //     tickvals: [0,1,2,3],
+ //     ticktext: twentyOnePgViewTextList
+ //   }
+ // };
+ // Plotly.newPlot("twentyOnePgViewPlot", twentyOnePgViewData, 
+ //   twentyOnePgViewLayout, 
+ //   {displayModeBar: false, responsive: true});
+ // twentyThreePgView
+ // var twentyThreePgViewX = [0,1,2,3,4];
+ // var twentyThreePgViewY = ['500,000', '2,000,000', '5,000,000', '10,000,000','15,000,000'];
+ // var twentyThreePgViewTextList = ["2015", "2017", "2019","2021","2023"];
+ // var twentyThreePgViewData = [{
+ //   x:twentyThreePgViewX,
+ //   y:twentyThreePgViewY,
+ //   type:"line",
+ //   responsive: true,
+ //   marker: {
+ //     color: "rgba(10,62,89,1",
+ //   },
+ // }];
+ // var twentyThreePgViewLayout = {
+ //   font: {
+ //     size: 14,
+ //     color: "rgba(10,62,89,1)",
+ //   },
+ //   yaxis:{
+ //     title:"Views"
+ //   },
+ //   xaxis: {
+ //     tickangle: 0,
+ //     tickmode: "array",
+ //     tickvals: [0,1,2,3,4],
+ //     ticktext: twentyThreePgViewTextList
+ //   }
+ // };
+ // Plotly.newPlot("twentyThreePgViewPlot", twentyThreePgViewData, 
+ //   twentyThreePgViewLayout, 
+ //   {displayModeBar: false, responsive: true});
+ // twentyTwoBPgView
+ // var twentyTwoBPgViewX = [0,1,2,3,4];
+ // var twentyTwoBPgViewY = ['500,000', '2,000,000', '5,000,000', '10,000,000','15,000,000'];
+ // var twentyTwoBPgViewTextList = ["2015", "2017", "2019","2021","2023"];
+ // var twentyTwoBPgViewData = [{
+ //   x:twentyTwoBPgViewX,
+ //   y:twentyTwoBPgViewY,
+ //   type:"line",
+ //   responsive: true,
+ //   marker: {
+ //     color: "rgba(10,62,89,1",
+ //   },
+ // }];
+ // var twentyTwoBPgViewLayout = {
+ //   font: {
+ //     size: 14,
+ //     color: "rgba(10,62,89,1)",
+ //   },
+ //   yaxis:{
+ //     title:"Views"
+ //   },
+ //   xaxis: {
+ //     // tickangle: 0,
+ //     tickmode: "array",
+ //     tickvals: [0,1,2,3,4],
+ //     ticktext: twentyTwoBPgViewTextList
+ //   }
+ // };
+ // Plotly.newPlot("twentyTwoBPgViewPlot", twentyTwoBPgViewData, 
+ //   twentyTwoBPgViewLayout, 
+ //   {displayModeBar: false, responsive: true});
 
 },{}]},["aPvEp","9Uto5"], "9Uto5", "parcelRequire94c2")
 

@@ -1,10 +1,3 @@
-//open switch
-
-function clickToOpen() {
-  $('#mainNav').toggleClass('close');
-  $('#mainNav').toggleClass('open');
-}
-
 //arrows
 
 // Option 1: Using the Intersection Observer API (modern approach)
