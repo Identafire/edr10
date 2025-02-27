@@ -82,6 +82,16 @@
     }
 }
 
+.igation{
+    display: initial;
+}
+
+@media (max-width: 575px){
+    .igation{
+        @include visually-hidden;
+    }
+}
+
 .nav{
 max-width: 100px;
 li{
