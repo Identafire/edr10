@@ -173,64 +173,40 @@ li{
     }
 }
 
-@include media-breakpoint-up(xl) {
+.hero-intro {
+    margin-top: -4rem;
+}
+
+@media (min-width: 1400px) {
     .hero-intro{
-        margin-top: -13rem;
+        margin-top: -8rem;
     }
-    .headertext{
-        &.one{
-            margin-left: -20%;
-        }
-        &.two{
-            margin-top: -13%;
-            margin-left: -25%;
-        }
+  }
+
+
+@include media-breakpoint-down(xl) {
+    .hero-intro{
+        margin-top: -5rem;
     }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-down(lg) {
     .hero-intro{
-        margin-top: -7rem;
-    }
-    .headertext{
-        &.one{
-            margin-left: -20%;
-        }
-        &.two{
-            margin-top: -13%;
-            margin-left: -25%;
-        }
+        margin-top: -3rem;
     }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-down(md) {
     .hero-intro{
-        margin-top: -7rem;
-    }
-    .headertext{
-        &.one{
-            margin-left: -20%;
-        }
-        &.two{
-            margin-top: -13%;
-            margin-left: -25%;
-        }
+        margin-top: 2rem;
     }
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-down(sm) {
     .hero-intro{
-        margin-top: -4rem;
+        margin-top: 1rem;
     }
-    .headertext{
-        &.one{
-            margin-left: -20%;
-        }
-        &.two{
-            margin-top: -13%;
-            margin-left: -25%;
-        }
-    }
+
 }
 
 .section-header{
@@ -297,14 +273,29 @@ li{
         overflow: visible;
         font-weight: bold;
     }
-    .col-sm{
+    .item{
     background: none;
+    min-height: 274px;
         &:hover, &:active, &:focus{
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="273.345" viewBox="0 0 273.345 273.345"><rect id="ui-square-mauve" width="201.073" height="201.073" transform="matrix(0.875, 0.485, -0.485, 0.875, 97.482, 0)" fill="%23501141"/></svg>');
             background-repeat: no-repeat;
             overflow: visible;
             background-position: center center;
             color: white;
+            a{
+                &:link{
+                    color: $white;
+                }
+                &:hover, &:active, &:focus{
+                    color: $edr-yellow-soft;
+                }
+            }
+        }
+        &.big{
+            &:hover{
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="395.015" height="395.015" viewBox="0 0 395.015 395.015"><rect width="280" height="280" transform="translate(211.319) rotate(49)" fill="%23501141"/></svg>');
+                min-height: 280px;
+            }
         }
     }
 }
@@ -636,5 +627,13 @@ figcaption{
     }
     &.fast-speed{
         animation-duration: 75s;
+    }
+}
+//------------------------------------------------------------------------
+//SPOTLIGHT CAROUSEL
+//------------------------------------------------------------------------
+#spotlightCarousel{
+    .carousel-inner {
+        min-height: 600px;
     }
 }
