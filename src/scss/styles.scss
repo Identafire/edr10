@@ -72,7 +72,7 @@
     }
 }
 
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
     #mainNav{
         width: 195px;
         border-top-left-radius: 4rem;
