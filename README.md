@@ -31,3 +31,8 @@ for charts. all charts are contained in charts.js at src>js
 * Finish Fly-ins (Aaron)
 * Update timeline styles (Aaron)
 * Fonts for each section heading
+
+## Nice to Haves
+
+* High Contrast Mode
+- There is an input switch commented out for this in main nav, but no styles tied to it

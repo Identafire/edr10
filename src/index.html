@@ -18,6 +18,28 @@
     <script src="js/mapdata.js"></script>		
     <script src="js/usmap.js"></script>
     <script src="js/main.js"></script>
+    <script>
+function noMotion(classList = ['invisible','fade-in','fadeIn','slide-in-bounce','slide-in-bounce-slow','visible', 'slideIn','slide-in']) {
+  // Check if classList is defined and is an array
+  if (!classList || !Array.isArray(classList)) {
+    console.error('noMotion requires an array of class names');
+    return;
+  }
+  
+  document.querySelectorAll('div').forEach(div => {
+    // Toggle each class in the provided list
+    classList.forEach(className => {
+      div.classList.remove(className);
+    });
+  });
+  document.querySelectorAll('img').forEach(img => {
+    // Toggle each class in the provided list
+    classList.forEach(className => {
+      img.classList.remove(className);
+    });
+  });
+}
+    </script>
     <!-- <script src="js/arrows.js"></script> -->
   </head>
   <body data-bs-spy="scroll" data-bs-target="#arrowIncreaseDemand">
@@ -79,7 +101,7 @@ NAVIGATION
       <!-- page motion control starts -->
       <div class="form-check form-switch pt-3 pt-md-3 d-none d-md-block">
         <label class="form-check-label nav-label fs-7 mb-2" for="motionSwitch">Reduce Page Motion</label>
-        <input class="form-check-input" type="checkbox" id="mySwitchMotion" name="motion" value="off">
+        <input class="form-check-input" type="checkbox" id="mySwitchMotion" name="motion" value="off" onclick="noMotion()">
       </div>
     </li>
     <!-- <li class="border-top my-3"></li>
@@ -106,10 +128,10 @@ HERO
     <!-- hero start -->
   <div class="py-5 col col-md-11 text-center text-bg-dark bg-primary rounded-6 z-1 mx-2 mt-5 mx-md-auto">
     <div class="row">
-      <img class="headertext one d-none d-md-block" src="../src/img/photos/headertext-top.svg" tabindex="0">
-      <img class="headertext two d-none d-md-block" src="../src/img/photos/headertext-bottom.svg" tabindex="0">
-      <img class="headertext-mob one d-block d-md-none" src="../src/img/photos/headertext-top-mob.svg" tabindex="0">
-      <img class="headertext-mob two d-block d-md-none" src="../src/img/photos/headertext-bottom-mob.svg" tabindex="0">
+      <img id="heroArrowOne" class="headertext one d-none d-md-block slide-in invisible" src="../src/img/photos/headertext-top.svg" tabindex="0">
+      <img id="heroArrowTwo" class="headertext two d-none d-md-block invisible" src="../src/img/photos/headertext-bottom.svg" tabindex="0">
+      <img id="heroArrowOneMob" class="headertext-mob one d-block d-md-none invisible" src="../src/img/photos/headertext-top-mob.svg" tabindex="0">
+      <img  id="heroArrowTwoMob"class="headertext-mob two d-block d-md-none invisible" src="../src/img/photos/headertext-bottom-mob.svg" tabindex="0">
     </div>
     <h1 class="visually-hidden-focusable">Celebrating a Decade of EdReports Impact</h1>
     <div class="col-10 col-md-8 col-xxl-6 mx-auto hero-intro">
@@ -165,7 +187,7 @@ IMPACT SECTION
  
   <!-------------- IMPACT: increasing demand for excellence ------------->
 
-  <div id="arrowIncreaseDemand" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+  <div id="arrowIncreaseDemand" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
     <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
       <h3><span class="pt-3 pb-2 ps-3 d-inline-flex h2">Increasing Demand for Excellence</span></h3>
     </div>
@@ -179,7 +201,7 @@ IMPACT SECTION
   <!-- intro -->
   <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
-      <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+      <div class="col bg-primary rounded-6 text-light p-5 align-content-center fadeIn invisible">
         <figure>
         <blockquote class="blockquote">
           <p>&ldquo;EdReports has fundamentally changed the marketplace by holding people accountable to higher expectations for curriculum, while also offering a blueprint for how to transform industries—disciplined, sustained effort over time.&rdquo;</p>
@@ -235,17 +257,17 @@ IMPACT SECTION
     </div>
     <div class="row p-1">
       <h4 class="text-center h3"><abbr  title="English Language Arts">ELA</abbr></h4>
-      <div id="elaPlot"></div>
+      <div id="elaPlot" class="fadeIn invisible"></div>
     </div>
     <hr>
     <div class="row">
         <h4 class="text-center h3 mt-5">Math</h4>
-        <div id="mathPlot"></div>
+        <div id="mathPlot" class="fadeIn invisible"></div>
     </div>
     <hr>
     <div class="row">
         <h4 class="text-center h3 mt-5">Science</h4>
-        <div id="sciPlot"></div>
+        <div id="sciPlot" class="fadeIn invisible"></div>
     </div>
   </div>
 </div>
@@ -260,7 +282,7 @@ IMPACT SECTION
 
   <!-- IMPACT: Empowering Districts with Knowledge -->
 
-  <div id="arrowEmpowering"" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+  <div id="arrowEmpowering" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
     <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
       <h3><span class="pt-3 pb-2 d-inline-flex h2">Empowering Districts with Knowledge</span></h3>
     </div>
@@ -274,7 +296,7 @@ IMPACT SECTION
   <!-- intro -->
   <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
-      <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+      <div class="col bg-primary rounded-6 text-light p-5 align-content-center fadeIn invisible">
         <figure>
         <blockquote class="blockquote">
           <p>“The work of EdReports reviewers is some of the most important work educators are doing. …. There was disbelief from our teachers and principals that we could actually find high-quality materials that reflected our students&rsquo; needs and what we wanted our young people to be engaging in. But as we involved EdReports we were able to build on the groundwork we had laid for decisions that needed to be made around standards-aligned curriculum. We were able to learn more about what to look for in high-quality materials. Our review committee still says this was the best professional learning they ever received.”</p>
@@ -344,7 +366,7 @@ IMPACT SECTION
 
   <!-- IMPACT: States Driving Systemic Change -->
 
-  <div class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+  <div id="arrowSystemic" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
     <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
       <h3><span class="pt-3 pb-2 ps-3 d-inline-flex h2">States Driving Systemic Change</span></h3>
     </div>
@@ -358,7 +380,7 @@ IMPACT SECTION
   <!-- intro -->
   <div class="container col-sm-8 d-flex mx-2 mx-md-auto">
     <div class="row">
-      <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+      <div class="col bg-primary rounded-6 text-light p-5 align-content-center fadeIn invisible">
         <figure>
         <blockquote class="blockquote">
           <p>&ldquo;In Kentucky, we know that ensuring all students become strong readers requires access to instructional resources that are both high-quality and evidence-based. Having reliable, research-based information is essential for empowering school districts to select resources that are standards-aligned and meet the diverse literacy needs of our students. Tools that reflect the science of reading and support structured literacy practices help us make decisions that align with our literacy goals and ensure every child has the opportunity for vibrant learning and lifelong literacy success.&rdquo;</p>
@@ -415,7 +437,7 @@ IMPACT SECTION
       <div class="container my-5">
         <div class="row">
         <div class="col-sm-12 col-md-9 order-md-1">
-          <div id="map"></div>
+          <div id="map" class="fadeIn invisible"></div>
         </div>
         <div id="legend-container" class="col-sm-12 col-md-3 legend order-0">
           <ul class="list-unstyled d-flex flex-column text-primary">
@@ -442,7 +464,7 @@ IMPACT SECTION
 
 <!------------------ pillbox: supporting state innovation ----------------->
  
-<div class="container-fluid col-12 col-md-8 pillbox rounded-100 outline-mauve mt-5 bg-white p-0 mx-2 mx-md-auto">
+<div class="container-fluid col-12 col-md-8 pillbox rounded-100 outline-mauve mt-5 bg-white p-0 mx-2 mx-md-auto fadeIn invisible">
   <!-- pill -->
   <div class="pill row justify-content-between align-items-center rounded-100 text-center bg-mauve mx-auto outline-mauve w-100">
     <!--body-->
@@ -488,7 +510,7 @@ IMPACT SECTION
       <div class="carousel-inner bg-white rounded-5 p-1 p-md-3">
         <!-- slide: new mexico -->
         <div class="carousel-item text-center active">
-          <div class="row my-5 col-10 col-md-6 mx-auto">
+          <div class="row my-5 col-10 col-md-6 mx-auto fadeIn invisible">
             <figure class="d-flex flex-column justify-items-center justify-content-center align-items-center">
               <h3 class="d-inline-flex">Spotlight: <span class="visually-hidden">New Mexico</span></h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="152.231" height="170.953">
@@ -517,7 +539,7 @@ IMPACT SECTION
         <!-- slide: new mexico end -->
         <!-- slide: kentucky -->
         <div class="carousel-item text-center">
-          <div class="row my-5 col-10 col-md-6 mx-auto">
+          <div class="row my-5 col-10 col-md-6 mx-auto fadeIn invisible">
             <figure class="d-flex flex-column justify-items-center justify-content-center align-items-center">
               <h3 class="d-inline-flex">Spotlight: <span class="visually-hidden">Kentucky</span></h3>
               <svg class="d-inline-flex" xmlns="http://www.w3.org/2000/svg" width="219.041" height="110.683">
@@ -538,7 +560,7 @@ IMPACT SECTION
         <!-- slide: kentucky end -->
          <!-- slide: nebraska -->
          <div class="carousel-item text-center">
-          <div class="row my-5 col-10 col-md-6 mx-auto">
+          <div class="row my-5 col-10 col-md-6 mx-auto fadeIn invisible">
             <figcaption class="d-flex flex-column justify-items-center justify-content-center align-items-center">
               <h3 class="d-inline-flex">Spotlight: <span class="visually-hidden">Nebraska</span></h3>
               <svg xmlns="http://www.w3.org/2000/svg" width="226.085" height="112.042">
@@ -559,7 +581,7 @@ IMPACT SECTION
         <!-- slide: nebraska end -->
          <!-- slide: rhode island -->
          <div class="carousel-item text-center">
-          <div class="row my-5 col-10 col-md-6 mx-auto">
+          <div class="row my-5 col-10 col-md-6 mx-auto fadeIn invisible">
               <figure class="d-flex flex-column justify-items-center justify-content-center align-items-center">
               <h3 class="d-inline-flex">Spotlight: <span class="visually-hidden">Rhode Island</span></h3>
                             <svg xmlns="http://www.w3.org/2000/svg" width="110.153" height="157.16">
@@ -594,7 +616,7 @@ IMPACT SECTION
 
 <!-- IMPACT: Dynamic Growth in website Reach and Engagement -->
 
-<div id="arrowDynamic" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+<div id="arrowDynamic" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
   <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
     <h3><span class="pt-3 pb-2 ps-3 d-inline-flex h2">Dynamic Growth in Website Reach and Engagement</span></h3>
   </div>
@@ -608,7 +630,7 @@ IMPACT SECTION
 <!-- intro -->
 <div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
-    <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+    <div class="col bg-primary rounded-6 text-light p-5 align-content-center fadeIn invisible">
       <figure>
       <blockquote class="blockquote">
         <p>“The research is clear&mdash;the effective use of quality instructional materials can make a tremendous difference in helping students achieve success. Those districts and schools showing improvement engage in rigorous and deliberate materials selection processes, including deeply involving teachers and providing the necessary professional development and implementation support. In so many places across the country, EdReports' reviews and resources are enabling these approaches, informing the first steps leading to classroom experiences that raise achievement for students and help them reach their fullest potential.”</p>
@@ -676,7 +698,7 @@ IMPACT SECTION
 
 <!-- IMPACT: Continuous Expansion of Reviews -->
 
-<div id="arrowContinuous" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+<div id="arrowContinuous" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
   <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
     <h3><span class="pt-3 pb-2 ps-3 d-inline-flex h2">Continuous Expansion of Reviews</span></h3>
   </div>
@@ -690,7 +712,7 @@ IMPACT SECTION
 <!-- intro -->
 <div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
-    <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+    <div class="col bg-primary rounded-6 text-light p-5 align-content-cente fadeIn invisibler">
       <figure>
       <blockquote class="blockquote">
         <p>&ldquo;For years, Student Achievement Partners and EdReports have worked across the education sector to support educators and elevate the role of high-quality instructional materials in advancing equity and excellence in education. EdReports&lsquo; 2025 launch of version 2.0 review tools is a testament to their dedication to learning from the field and refining its processes to meet evolving needs, ensuring all students have access to materials that foster engagement, rigor, and success.&rdquo;</p>
@@ -759,7 +781,7 @@ IMPACT SECTION
 
 <!-- IMPACT: By Educators, For Educators -->
 
-<div id="arrowByEducators" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8">
+<div id="arrowByEducators" class="container-fluid d-flex flex-row-nowrap align-items-center mt-8 slideIn">
   <div class="d-inline-flex bg-mauve text-light col-sm-9 justify-content-center ms-n3">
     <h3><span class="pt-3 pb-2 ps-3 d-inline-flex h2">By Educators, For Educators</span></h3>
   </div>
@@ -773,7 +795,7 @@ IMPACT SECTION
 <!-- intro -->
 <div class="container col-sm-8 mx-auto d-flex mx-2 mx-md-auto">
   <div class="row">
-    <div class="col bg-primary rounded-6 text-light p-5 align-content-center">
+    <div class="col bg-primary rounded-6 text-light p-5 align-content-center fadeIn invisible">
       <figure>
       <blockquote class="blockquote">
         <p>&ldquo;Becoming an EdReports reviewer transformed the way I understood and discussed curriculum with my districts. The training gave me invaluable knowledge I could immediately apply, and participating in my first review deepened my perspective on high-quality instructional materials. Later, as an EdReports Klawe Fellow, I had the opportunity to expand that knowledge further—gaining insight into curriculum at the state level and working with leadership to drive meaningful change.&rdquo;</p>
@@ -1969,7 +1991,7 @@ JOURNEY SECTION
       </div>
 <!--pillboxes-->
   <!--pillbox 1-->
-    <div class="container col-10">
+    <div class="container col-10 fadeIn invisible">
       <div class="row mt-5 justify-content-around">
       <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5">
         <div class="pill d-flex container-fluid text-bg-white w-100 rounded-100 text-center bg-green mt-n1 py-3 align-items-center justify-content-between">
@@ -1991,7 +2013,7 @@ JOURNEY SECTION
       <!-- pillbox end -->
       </div>
       <!--pillbox 2-->
-      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5">
+      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5 fadeIn invisible">
         <div class="pill d-flex container-fluid text-bg-white w-100 rounded-100 text-center bg-green mt-n1 py-3 align-items-center justify-content-between">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-2 w-100 m-0">
             <div class="text-light d-inline-flex flex-fill align-items-center p-1 p-md-5 lead">
@@ -2013,7 +2035,7 @@ JOURNEY SECTION
     
 
       <!--pillbox 3-->
-      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5">
+      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5 fadeIn invisible">
         <div class="pill d-flex container-fluid text-bg-white w-100 rounded-100 text-center bg-green mt-n1 py-3 align-items-center justify-content-between">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-2 w-100 m-0">
 
@@ -2034,7 +2056,7 @@ JOURNEY SECTION
       </div>
 
       <!--pillbox 4-->
-      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5">
+      <div class="pillbox row col-12 col-xl-5 rounded-6 mx-auto outline-green bg-white mx-2 mx-md-auto p-0 mb-5 fadeIn invisible">
         <div class="pill d-flex container-fluid text-bg-white w-100 rounded-100 text-center bg-green mt-n1 py-3 align-items-center justify-content-between">
           <div class="wrapper flex flex-row-nowrap d-flex flex-row justify-content-between align-items-center align-content-center px-2 w-100 m-0">
 

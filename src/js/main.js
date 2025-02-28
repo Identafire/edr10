@@ -3,65 +3,295 @@
 function clickToOpen() {
   $('#mainNav').toggleClass('close');
   $('#mainNav').toggleClass('open');
-}
+};
 
 //arrows
 
-// Option 1: Using the Intersection Observer API (modern approach)
+// Enhanced scroll detection script that works with both IDs and classes
 document.addEventListener('DOMContentLoaded', () => {
-  // Accept an array of element IDs to observe
-  const elementIds = ['arrowIncreaseDemand','arrowEmpowering', 'arrowDynamic', 'arrowContinuous','arrowByEducators']; // Default value - can be modified or passed as a parameter
-  
-  // Initialize the observer
+  // Configuration object for elements to observe
+  const elementsConfig = [
+    // Example with ID
+    {
+      selector: 'heroArrowOne', // ID without # prefix
+      type: 'id',
+      onEnter: (element, selector) => {
+        element.classList.add('visible','slide-in-bounce');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    },
+    {
+      selector: 'heroArrowTwo', // ID without # prefix
+      type: 'id',
+      onEnter: (element, selector) => {
+        element.classList.add('visible','slide-in-bounce-slow');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    },
+    {
+      selector: 'heroArrowOneMob', // ID without # prefix
+      type: 'id',
+      onEnter: (element, selector) => {
+        
+        element.classList.add('visible','slide-in-bounce');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    },
+    {
+      selector: 'heroArrowTwoMob', // ID without # prefix
+      type: 'id',
+      onEnter: (element, selector) => {
+        
+        element.classList.add('visible','slide-in-bounce-slow');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    },
+    // Example with class
+    {
+      selector: 'fadeIn', // Class without . prefix
+      type: 'class',
+      onEnter: (element, selector) => {
+        
+        element.classList.add('fade-in','visible');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    },
+    {
+      selector: 'slideIn', // Class without . prefix
+      type: 'class',
+      onEnter: (element, selector) => {
+        
+        element.classList.add('visible','slide-in-bounce');
+        element.classList.remove('invisible');
+      },
+      onExit: (element, selector) => {
+        null
+      }
+    }
+    // Add more configurations as needed
+  ];
+
+  // Create an Intersection Observer instance
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      // Find which configuration this element belongs to
+      const elementConfig = findConfigForElement(entry.target);
+      
+      if (!elementConfig) return; // Skip if no config found
+      
+      const selectorPrefix = elementConfig.type === 'id' ? '#' : '.';
+      const selectorName = '${selectorPrefix}${elementConfig.selector}';
+      
       if (entry.isIntersecting) {
-        console.log(`Element #${entry.target.id} is now visible in the viewport!`);
-        // Add your action here, for example:
-        entry.target.classList.add('slideLeft');
-        
-        // Optional: Stop observing once it's visible
-        // observer.unobserve(entry.target);
-      } else {
-        console.log(`Element #${entry.target.id} is no longer visible in the viewport.`);
-        // Optional: Handle when element leaves the viewport
-        // entry.target.classList.remove('visible');
+        // Element has entered the viewport
+        if (typeof elementConfig.onEnter === 'function') {
+          // Check if the function expects two parameters
+          if (elementConfig.onEnter.length >= 2) {
+            elementConfig.onEnter(entry.target, selectorName);
+          } else {
+            // Original function only expects one parameter
+            elementConfig.onEnter(entry.target);
+          }
+        } else {
+          console.error('onEnter is not a function for element: ${selectorName}');
+          // Apply default behavior
+          entry.target.classList.add('visible');
+        }
+      } 
       }
-    });
+    );
   }, {
-    // Options:
-    root: null, // Use the viewport as the reference
-    rootMargin: '0px', // No margin
+    root: null, // Use the viewport
+    rootMargin: '0px',
     threshold: 0.1 // Trigger when at least 10% of the element is visible
   });
 
-  // Function to initialize observation for multiple elements
-  function observeElements(ids) {
-    ids.forEach(id => {
-      const element = document.getElementById(id);
-      if (element) {
-        observer.observe(element);
-        console.log(`Now observing element with ID: ${id}`);
-      } else {
-        console.warn(`Element with ID "${id}" not found on the page.`);
+  // Helper function to find the matching configuration for an element
+  function findConfigForElement(element) {
+    return elementsConfig.find(config => {
+      if (config.type === 'id') {
+        return element.id === config.selector;
+      } else if (config.type === 'class') {
+        return element.classList.contains(config.selector);
       }
+      return false;
     });
   }
 
-  // Start observing elements with the specified IDs
-  observeElements(elementIds);
-  
-  // Example of how to add more elements to observe later:
-  // observeElements(['another-element', 'yet-another-element']);
-  
-  // Utility function to set up observation for a new list of IDs
-  window.observeScrollElements = function(ids) {
-    if (Array.isArray(ids)) {
-      observeElements(ids);
-    } else if (typeof ids === 'string') {
-      observeElements([ids]); // Convert single ID to array
-    } else {
-      console.error('observeScrollElements requires an array of IDs or a single ID string');
+  // Start observing all configured elements
+  elementsConfig.forEach(config => {
+    let elements = [];
+    
+    try {
+      if (config.type === 'id') {
+        // Get element by ID
+        const element = document.getElementById(config.selector);
+        if (element) elements = [element];
+      } else if (config.type === 'class') {
+        // Get elements by class name
+        const collection = document.getElementsByClassName(config.selector);
+        if (collection && collection.length > 0) {
+          elements = Array.from(collection);
+        }
+      }
+      
+      const selectorPrefix = config.type === 'id' ? '#' : '.';
+      const selectorName = '${selectorPrefix}${config.selector}';
+      
+      if (elements.length === 0) {
+        console.warn('No elements found for ${selectorName}');
+      } else {
+        elements.forEach(element => {
+          if (element) {
+            observer.observe(element);
+            console.log("Now observing ${config.type === 'id' ? 'element with ID' : 'element with class'}: ${selectorName}");
+          }
+        });
+      }
+    } catch (error) {
+      console.error("Error while setting up observation for ${config.type === 'id' ? '#' : '.'}${config.selector}:", error);
     }
+  });
+
+  // Utility functions
+  
+  // Add a new element to observe by ID
+  window.observeElementById = function(id, onEnterFn, onExitFn) {
+    if (!id) {
+      console.error('No ID provided to observeElementById');
+      return false;
+    }
+    
+    // Default functions if not provided
+    const onEnter = onEnterFn || function(el) {
+      console.log('Element #${id} has entered the viewport!');
+      el.classList.add('visible');
+    };
+    
+    const onExit = onExitFn || function(el) {
+      console.log('Element #${id} has left the viewport.');
+      el.classList.remove('visible');
+    };
+    
+    // Add to our configuration
+    const newConfig = {
+      selector: id,
+      type: 'id',
+      onEnter,
+      onExit
+    };
+    
+    elementsConfig.push(newConfig);
+    
+    // Start observing the new element
+    const element = document.getElementById(id);
+    if (element) {
+      observer.observe(element);
+      console.log('Now observing element with ID: #${id}');
+      return true;
+    } else {
+      console.error('Element with ID "#${id}" not found on the page.');
+      return false;
+    }
+  };
+  
+  // Add elements to observe by class
+  window.observeElementsByClass = function(className, onEnterFn, onExitFn) {
+    if (!className) {
+      console.error('No class name provided to observeElementsByClass');
+      return false;
+    }
+    
+    // Default functions if not provided
+    const onEnter = onEnterFn || function(el) {
+      console.log('Element .${className} has entered the viewport!');
+      el.classList.add('visible');
+    };
+    
+    const onExit = onExitFn || function(el) {
+      console.log('Element .${className} has left the viewport.');
+      el.classList.remove('visible');
+    };
+    
+    // Add to our configuration
+    const newConfig = {
+      selector: className,
+      type: 'class',
+      onEnter,
+      onExit
+    };
+    
+    elementsConfig.push(newConfig);
+    
+    // Start observing all elements with this class
+    const elements = document.getElementsByClassName(className);
+    if (elements.length > 0) {
+      Array.from(elements).forEach(element => {
+        observer.observe(element);
+      });
+      console.log('Now observing ${elements.length} element(s) with class: .${className}');
+      return true;
+    } else {
+      console.error('No elements with class ".${className}" found on the page.');
+      return false;
+    }
+  };
+  
+  // Stop observing by selector (works with both IDs and classes)
+  window.stopObserving = function(selector, isClass = false) {
+    if (!selector) {
+      console.error('No selector provided to stopObserving');
+      return false;
+    }
+    
+    // Clean selector (remove # or . if present)
+    const cleanSelector = selector.replace(/^[#.]/, '');
+    const type = isClass ? 'class' : 'id';
+    const selectorPrefix = type === 'id' ? '#' : '.';
+    const formattedSelector = '${selectorPrefix}${cleanSelector}';
+    
+    let elements = [];
+    
+    if (type === 'id') {
+      const element = document.getElementById(cleanSelector);
+      if (element) elements.push(element);
+    } else {
+      elements = Array.from(document.getElementsByClassName(cleanSelector));
+    }
+    
+    if (elements.length === 0) {
+      console.error('No elements found for "${formattedSelector}"');
+      return false;
+    }
+    
+    // Stop observing these elements
+    elements.forEach(element => {
+      observer.unobserve(element);
+    });
+    
+    // Remove from our configuration array
+    for (let i = elementsConfig.length - 1; i >= 0; i--) {
+      if (elementsConfig[i].type === type && elementsConfig[i].selector === cleanSelector) {
+        elementsConfig.splice(i, 1);
+      }
+    }
+    
+    console.log("Stopped observing ${elements.length} element(s) with ${type === 'id' ? 'ID' : 'class'}: ${formattedSelector}");
+    return true;
   };
 });

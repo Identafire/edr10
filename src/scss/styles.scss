@@ -292,16 +292,7 @@ a:link{
         fill: $edr-mauve;
     }
 }
-
-@keyframes slideLeft {
-    from{ 
-        margin-left: -100%;
-    }
-    to{
-        margin-left: 0;
-    }
-}
-
+  
 #impact.section-header{
     .gradient-mask{
         background-image: url("../img/photos/bkg-impact.png");
@@ -691,15 +682,6 @@ figcaption{
     // margin-left: -10vw;
 }
 
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to { 
-        transform: rotate(360deg);      
-    }
-}
-
 .rotating {
     animation: rotating 300s linear infinite;
     &.medium-speed{
@@ -715,5 +697,118 @@ figcaption{
 #spotlightCarousel{
     .carousel-inner {
         min-height: 600px;
+    }
+}
+
+//------------------------------------------------------------------------
+//ANIMATIONS
+//------------------------------------------------------------------------
+
+/* Alternative animation with bounce effect */
+@keyframes slideInWithBounce {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    70% {
+      transform: translateX(10%); /* Overshoot a bit */
+      opacity: 1;
+    }
+    85% {
+      transform: translateX(-5%); /* Bounce back */
+    }
+    100% {
+      transform: translateX(0); /* Settle at final position */
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInWithBounceSlow {
+      /* Start with 0.5s (50%) of doing nothing (element remains invisible) */
+  0%, 50% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  /* Then start the animation from off-screen */
+  50.001% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  /* Fade in as it moves */
+  60% {
+    opacity: 0.7;
+  }
+  /* Overshoot the target position */
+  85% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  /* Bounce back slightly */
+  92% {
+    transform: translateX(-5%);
+  }
+  /* Finish at the proper position */
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  }
+
+  @keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+  .fade-in.invisible{
+    animation: fadeIn 0.75s ease-in-out forwards;;
+    opacity: 1;
+  }
+  .fade-in.visible{
+    animation: fadeIn 0.75s ease-in-out forwards;;
+    opacity: 1;
+  }
+  
+
+.slide-in-on-scroll {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+  }
+/* Apply the animation to an element */
+.slide-in-on-scroll.visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+.slide-in-bounce {
+    transform: translateX(-100);
+    animation: slideInWithBounce 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    opacity: 0;
+  }
+
+  .slide-in-bounce-slow {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-delay: .5s;
+    animation-duration: 2s;
+}
+
+  .slide-in-bounce-slow.visible {
+    transform: translateX(0);
+    animation: slideInWithBounceSlow 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    opacity: 1;
+
+}
+  
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);      
     }
 }

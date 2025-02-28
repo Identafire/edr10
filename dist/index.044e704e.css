@@ -461,8 +461,17 @@ abbr {
   background-color: #fff;
 }
 
-[data-bs-motion="reduced-motion"] .rotating {
+[data-bs-motion="reduced-motion"] .rotating, [data-bs-motion="reduced-motion"] .fade-in, [data-bs-motion="reduced-motion"] .slide-in-bounce-slow, [data-bs-motion="reduced-motion"] .slide-in-bounce {
+  transition: none;
   animation: none;
+  translate: none;
+}
+
+[data-bs-motion="reduced-motion"] .invisible {
+  opacity: 1;
+  transition: none;
+  animation: none;
+  translate: none;
 }
 
 .border-mauve {
@@ -12349,16 +12358,6 @@ figcaption.blockquote-footer:before {
   position: fixed;
 }
 
-@keyframes rotating {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .rotating {
   animation: 300s linear infinite rotating;
 }
@@ -12373,5 +12372,111 @@ figcaption.blockquote-footer:before {
 
 #spotlightCarousel .carousel-inner {
   min-height: 600px;
+}
+
+@keyframes slideInWithBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+
+  85% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInWithBounceSlow {
+  0%, 50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50.001% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  60% {
+    opacity: .7;
+  }
+
+  85% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+
+  92% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in.invisible, .fade-in.visible {
+  opacity: 1;
+  animation: .75s ease-in-out forwards fadeIn;
+}
+
+.slide-in-on-scroll {
+  opacity: 0;
+  transition: transform 1s ease-out, opacity .5s ease-out;
+  transform: translateX(-100%);
+}
+
+.slide-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-bounce {
+  opacity: 0;
+  animation: 1.2s cubic-bezier(.68, -.55, .27, 1.55) forwards slideInWithBounce;
+  transform: translateX(-100px);
+}
+
+.slide-in-bounce-slow {
+  opacity: 0;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  transform: translateX(-100%);
+}
+
+.slide-in-bounce-slow.visible {
+  opacity: 1;
+  animation: 1.2s cubic-bezier(.68, -.55, .27, 1.55) forwards slideInWithBounceSlow;
+  transform: translateX(0);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=index.044e704e.css.map */

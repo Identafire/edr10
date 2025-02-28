@@ -444,6 +444,32 @@ abbr{
 [data-bs-motion="reduced-motion"] {
     .rotating {
         animation: none;
+        transition: none;
+        translate: none;
+    }
+    .fade-in {
+        animation: none;
+        animation: none;
+        transition: none;
+        translate: none;
+    }
+    .slide-in-bounce-slow {
+        animation: none;
+        animation: none;
+        transition: none;
+        translate: none;
+    }
+    .slide-in-bounce {
+        animation: none;
+        animation: none;
+        transition: none;
+        translate: none;
+    }
+    *.invisible{
+        opacity: 1;
+        animation: none;
+        transition: none;
+        translate: none;
     }
 }
 
