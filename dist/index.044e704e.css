@@ -3868,11 +3868,11 @@ progress {
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' class='acc-btn' width='31' height='31' viewBox='0 0 31 31'%3e%3cpath id='Subtraction_1' data-name='Subtraction 1' d='M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z' transform='translate%28-1119 -384%29' fill='rgb%2810, 62, 89%29'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
-  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transform: rotate(-225deg);
   --bs-accordion-btn-icon-transition: transform .2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgb%284, 24.8, 35.6%29' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' class='acc-btn' width='31' height='31' viewBox='0 0 31 31'%3e%3cpath id='Subtraction_1' data-name='Subtraction 1' d='M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z' transform='translate%28-1119 -384%29' fill='rgb%28240, 83, 35%29'/%3e%3c/svg%3e");
   --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem #0a3e5940;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
@@ -12123,6 +12123,55 @@ abbr {
   text-decoration: none !important;
 }
 
+.accordion-item {
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 2rem !important;
+}
+
+.accordion-item:first-child {
+  border-radius: 2rem;
+}
+
+.accordion-item .accordion-button {
+  box-shadow: none;
+  color: #0a3e59;
+  width: 100%;
+  font-family: Rockwell, garamond, serif;
+  font-weight: 600;
+  border-radius: 2rem !important;
+}
+
+.accordion-item .accordion-button:not(collapsed) {
+  background-color: #fff;
+}
+
+.accordion-item .accordion-header {
+  border-radius: 2rem !important;
+}
+
+.accordion {
+  z-index: 100;
+  border-left: 1px solid #fff;
+}
+
+.accordion .space {
+  width: 1rem;
+}
+
+.accordion h3, .accordion .h3 {
+  margin-left: -22px;
+}
+
+.accordion h3:before, .accordion .h3:before {
+  content: "• ";
+  font-size: 36px;
+}
+
+.accordion .accordion-item {
+  display: inline-block;
+}
+
 .accordion .icon {
   background-position: center;
   background-repeat: no-repeat;
@@ -12157,13 +12206,28 @@ abbr {
   display: inline-block;
 }
 
-.accordion hr {
-  border-style: dashed;
-  border-color: #fff;
+.accordion .year {
+  flex-flow: row;
+  padding: 1rem 0;
+  display: flex;
 }
 
-.accordion .year {
-  padding: 1rem 0;
+.accordion .year .col.number {
+  min-width: 100px;
+  display: inline-flex;
+}
+
+.accordion .year .col.dash {
+  flex-basis: 90%;
+  justify-self: stretch;
+  display: inline-flex;
+}
+
+.accordion .year .col.dash hr {
+  opacity: 1;
+  border-style: dashed;
+  border-color: #fff;
+  width: 100%;
 }
 
 .accordion-legend li {
@@ -12219,6 +12283,12 @@ abbr {
   background-repeat: repeat-x;
   height: 20px;
   margin-top: -8px;
+}
+
+@media (width <= 575px) {
+  .accordion h3, .accordion .h3 {
+    margin-left: -6px;
+  }
 }
 
 .pillbox {
@@ -12356,6 +12426,29 @@ figcaption.blockquote-footer:before {
   width: 110vw;
   height: 110vw;
   position: fixed;
+}
+
+.accordion * {
+  z-index: 6;
+}
+
+.accordion-body {
+  z-index: 100;
+  position: relative;
+}
+
+.timeline-shape {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.timeline-shape svg {
+  object-fit: cover;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .rotating {

@@ -228,6 +228,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         console.log("Stopped observing ${elements.length} element(s) with ${type === 'id' ? 'ID' : 'class'}: ${formattedSelector}");
         return true;
     };
-});
+}); //accordion width
 
 //# sourceMappingURL=index.aa69868b.js.map

@@ -295,3 +295,5 @@ document.addEventListener('DOMContentLoaded', () => {
     return true;
   };
 });
+
+//accordion width

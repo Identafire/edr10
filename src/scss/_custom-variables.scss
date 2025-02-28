@@ -4,12 +4,14 @@
 //------------------------------------------------------------------------
 
 $primary:       #0A3E59;
+$primary-rgb:       rgba(10,62,89,1);
 $primary-soft: #899FA8;
 $body-bg:      #E3F6FF;
 $edr-blue-light: #1DA8DE;
 $edr-mauve: #501141;
 $edr-mauve-light: #B071A5;
 $edr-orange: #F05323;
+$edr-orange-rgb: rgba(240,83,35,1);
 $edr-orange-light: #FA9E7E;
 $edr-green: #9FBD3B;
 $edr-green-light: #D3E863;
@@ -19,6 +21,14 @@ $accordion-color: $primary;
 $box-shadow: 0px 0px 3px #000000A3;
 $carousel-control-color: $primary;
 $carousel-indicator-active-bg: $primary;
+$accordion-icon-color: $primary-rgb;
+$accordion-icon-active-color: $edr-orange-rgb;
+$accordion-bg: white;
+$accordion-icon-transform: rotate(-225deg);
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='acc-btn' width='31' height='31' viewBox='0 0 31 31'><path id='Subtraction_1' data-name='Subtraction 1' d='M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z' transform='translate(-1119 -384)' fill='#{$accordion-icon-color}'/></svg>");
+
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='acc-btn' width='31' height='31' viewBox='0 0 31 31'><path id='Subtraction_1' data-name='Subtraction 1' d='M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z' transform='translate(-1119 -384)' fill='#{$accordion-icon-active-color}'/></svg>");
 
 
 .test-outline{

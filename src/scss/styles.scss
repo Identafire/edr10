@@ -396,17 +396,6 @@ abbr{
 //------------------------------------------------------------------------
 //ACCORDION
 //------------------------------------------------------------------------
-$accordion-bg: transparent;
-$accordion-color: $primary;
-$accordion-icon-hover-color: rgba(255,0,0,0.5);
-$accordion-icon-color: rgba(0,0,0,0.5);
-$accordion-icon-active-color: rgba(0,0,0,0.5);
-$accordion-icon-hover-bg: rgba(255,0,0,0.5);
-
-$accordion-button-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="acc-btn" width="31" height="31" viewBox="0 0 31 31"><path id="Subtraction_1" data-name="Subtraction 1" d="M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z" transform="translate(-1119 -384)" fill="#{$accordion-icon-color}"/></svg>');
-
-$accordion-button-active-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" class="acc-btn-open" width="31" height="31" viewBox="0 0 31 31"><path id="Subtraction_1" data-name="Subtraction 1" d="M1134.5,415a15.5,15.5,0,1,1,10.96-4.54A15.4,15.4,0,0,1,1134.5,415Zm-6.688-16.438a.938.938,0,0,0,0,1.876h6.25v6.25a.938.938,0,1,0,1.876,0v-6.25h6.25a.938.938,0,0,0,0-1.876h-6.25v-6.25a.938.938,0,1,0-1.876,0v6.25Z" transform="translate(-1119 -384) rotate(45deg)" fill="#{$accordion-icon-active-color}"/></svg>');
-
 $accordion-icon-star-light: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20.616" height="20.002" viewBox="0 0 20.616 20.002"><path d="M11.246.5a.934.934,0,0,1,.844.527l2.68,5.52,5.984.883a.931.931,0,0,1,.754.637.941.941,0,0,1-.23.957l-4.34,4.3,1.023,6.078a.939.939,0,0,1-1.367.984l-5.352-2.859L5.9,20.387a.932.932,0,0,1-.988-.066.947.947,0,0,1-.379-.918l1.023-6.078-4.34-4.3A.938.938,0,0,1,1.738,7.43l5.984-.883,2.68-5.52A.939.939,0,0,1,11.246.5Zm0,3.086L9.2,7.813a.946.946,0,0,1-.707.52l-4.621.68,3.355,3.324a.94.94,0,0,1,.266.82L6.7,17.832l4.109-2.2a.931.931,0,0,1,.883,0l4.109,2.2-.789-4.672a.929.929,0,0,1,.266-.82l3.355-3.324-4.621-.684a.944.944,0,0,1-.707-.52Z" transform="translate(-0.938 -0.5)" fill="%23fff"/></svg>');
 
 $accordion-icon-star-primary: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20.616" height="20.002" viewBox="0 0 20.616 20.002"><path d="M11.246.5a.934.934,0,0,1,.844.527l2.68,5.52,5.984.883a.931.931,0,0,1,.754.637.941.941,0,0,1-.23.957l-4.34,4.3,1.023,6.078a.939.939,0,0,1-1.367.984l-5.352-2.859L5.9,20.387a.932.932,0,0,1-.988-.066.947.947,0,0,1-.379-.918l1.023-6.078-4.34-4.3A.938.938,0,0,1,1.738,7.43l5.984-.883,2.68-5.52A.939.939,0,0,1,11.246.5Zm0,3.086L9.2,7.813a.946.946,0,0,1-.707.52l-4.621.68,3.355,3.324a.94.94,0,0,1,.266.82L6.7,17.832l4.109-2.2a.931.931,0,0,1,.883,0l4.109,2.2-.789-4.672a.929.929,0,0,1,.266-.82l3.355-3.324-4.621-.684a.944.944,0,0,1-.707-.52Z" transform="translate(-0.938 -0.5)" fill="%230a3e59"/></svg>');
@@ -427,8 +416,46 @@ $accordion-icon-doc-light: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
 $accordion-icon-doc-primary: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20"><path d="M2.5,18.625A.627.627,0,0,1,1.875,18V3A.627.627,0,0,1,2.5,2.375H8.75V5.5A1.249,1.249,0,0,0,10,6.75h3.125V18a.627.627,0,0,1-.625.625ZM2.5.5A2.5,2.5,0,0,0,0,3V18a2.5,2.5,0,0,0,2.5,2.5h10A2.5,2.5,0,0,0,15,18V6.535a2.5,2.5,0,0,0-.73-1.77L10.73,1.23A2.492,2.492,0,0,0,8.965.5Zm2.188,10a.938.938,0,0,0,0,1.875h5.625a.938.938,0,0,0,0-1.875Zm0,3.75a.938.938,0,0,0,0,1.875h5.625a.938.938,0,0,0,0-1.875Z" transform="translate(0 -0.5)" fill="%230a3e59"/></svg>');
 
+.accordion-item{
+    margin: 1rem;
+    border-radius: 2rem !important;
+    overflow: hidden;
+    &:first-child{
+        border-radius: 2rem;
+    }
+    .accordion-button{
+        border-radius: 2rem !important;
+        box-shadow: none;
+        font-family: $font-family-serif;
+        font-weight: 600;
+        color: $primary;
+        width: 100%;
+        &:not(collapsed){
+            background-color: white;
+        }
+        
+    }
+    .accordion-header{
+        border-radius: 2rem !important;
+    }
+}
 
 .accordion {
+    border-left: 1px solid white;
+    z-index: 100;
+    .space{
+        width: 1rem;
+    }
+    h3{
+        &::before{
+            content: '• ';
+            font-size: 36px;
+        }
+    margin-left: -22px;
+    }
+    .accordion-item{
+        display: inline-block;
+    }
     .icon {
         margin-right: 1rem;
         background-size: contain;
@@ -466,12 +493,28 @@ $accordion-icon-doc-primary: url('data:image/svg+xml,<svg xmlns="http://www.w3.o
     h3 {
         display: inline-block;
     }
-    hr{
-        border-style: dashed;
-        border-color: white;
-    }
     .year{
         padding: 1rem 0;
+        display: flex;
+        flex-flow: row nowrap;
+        .col{
+            &.number{
+                min-width: 100px;
+                display: inline-flex;
+
+            }
+            &.dash{
+                display: inline-flex;
+                justify-self: stretch;
+                flex-basis: 90%;
+                hr{
+                    border-style: dashed;
+                    border-color: white;
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -527,6 +570,14 @@ $accordion-icon-doc-primary: url('data:image/svg+xml,<svg xmlns="http://www.w3.o
         }
 }
 
+
+@media (max-width: 575px){
+    .accordion {
+        h3{
+        margin-left: -6px;
+        }
+    }
+}
 
 
 //------------------------------------------------------------------------
@@ -672,7 +723,7 @@ figcaption{
     font-weight: 500;
 }
 //------------------------------------------------------------------------
-//CHARTS
+//SHAPES
 //------------------------------------------------------------------------
 .background-shape {
     z-index: -1;
@@ -681,6 +732,27 @@ figcaption{
     position: fixed;
     // margin-left: -10vw;
 }
+.accordion *{
+    z-index: 6;
+}
+.accordion-body{
+    z-index: 100;
+    position: relative;
+}
+.timeline-shape{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.timeline-shape svg{
+width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: 1;
+}
+
 
 .rotating {
     animation: rotating 300s linear infinite;
