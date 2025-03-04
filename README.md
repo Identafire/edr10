@@ -28,8 +28,8 @@ for charts. all charts are contained in charts.js at src>js
 
 ## To Do
 
-* Finish Fly-ins (Aaron)
-* Update timeline styles (Aaron)
+* ~~Finish Fly-ins (Aaron)~~
+* ~~Update timeline styles (Aaron)~~
 * Fonts for each section heading
 
 ## Nice to Haves
